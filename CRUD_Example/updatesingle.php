@@ -38,18 +38,29 @@ if($_POST['submit']){
     $lname = $_POST['lname'];
     $city = $_POST['city'];
     $groupid = $_POST['groupid'];
-    $query = mysqli_query($conn,"UPDATE studentsinfo set fname='$fname' where id='$a'");
-    $query = mysqli_query($conn,"UPDATE studentsinfo set lname='$lname' where id='$a'");
-    $query = mysqli_query($conn,"UPDATE studentsinfo set city='$city' where id='$a'");
-    $query = mysqli_query($conn,"UPDATE studentsinfo set groupid='$groupid' where id='$a'");
-    if($query){
+
+    if (empty($fname && $lname && $city && $groupid))
+    {
+        echo'All fields are required!';        
+    }
+    else
+    {
+        $query = mysqli_query($conn,"UPDATE studentsinfo set fname='$fname' where id='$a'");
+        $query = mysqli_query($conn,"UPDATE studentsinfo set lname='$lname' where id='$a'");
+        $query = mysqli_query($conn,"UPDATE studentsinfo set city='$city' where id='$a'");
+        $query = mysqli_query($conn,"UPDATE studentsinfo set groupid='$groupid' where id='$a'");
+    }
+    if($query)
+    {
+        echo '<br>';
         echo "Record Modified Successfully <br>";
-        echo "<a href='update.php'> Check your updated List </a>";
         // if you want to redirect to update page after updating
         //header("location: update.php");
     }
-    else { echo "Record Not modified";}
+    else { echo "<br>"."Record Not modified";}
     }
+    echo '<br>';
+    echo "<a href='update.php'> Home </a>";
 $conn->close();
 ?>
 </body>
