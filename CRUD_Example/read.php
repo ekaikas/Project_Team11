@@ -9,7 +9,7 @@ echo "<table border=\"1\"><tr><th>ID</th><th>First Name</th><th>Last Name</th>
     while($row = $result ->fetch_assoc()){
         echo "<tr><td>" . $row["id"] . "</td><td>". $row["fname"]."</td> <td>". $row["lname"] 
         
-        ."</td><td>". $row["city"]. "</td><td>". $row["groupid"]
+        ."</td><td>". $row["city"]. "</td><td>". $row["groupid"] // add timestamp()
         ."</td></tr>";
     }
     echo "</table>";

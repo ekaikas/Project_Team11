@@ -34,7 +34,7 @@ Group ID:<br>
 <?php 
 if($_POST['submit']){
     
-    $fname = $_POST['fname'];
+    $fname = $_POST['fname']; // add lname, city, groupid, no empty
     $query = mysqli_query($conn,"UPDATE studentsinfo set fname='$fname' where id='$a'");
     if($query){
         echo "Record Modified Successfully <br>";
