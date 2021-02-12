@@ -1,0 +1,111 @@
+/* ######################################## IMAGES #####################################*/
+.forum_img
+{
+    content: url('img/forum_logo.png');
+    height: 50px;
+}
+
+/* ######################################## NAV & FOOTER #####################################*/
+header
+{
+    position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background: black;
+	padding:0px;
+}
+
+footer
+{
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:black;
+	padding:0px;
+    color: white;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: inline;
+}
+
+li {
+    display: inline;
+    text-align: center;
+    margin: 25px;
+}
+
+li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+
+/* ######################################## GENERAL #####################################*/
+.fullscreen
+{
+    background-image:url('img/main_img.jpg');
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    padding:0 20px;
+}
+.fixer-bottom {
+    position:fixed;
+	bottom:150px;
+	left:0px;
+	width:100%;
+}
+.fixer-top {
+    position:fixed;
+	top:150px;
+	left:0px;
+	width:100%;
+}
+.center-txt
+{
+    text-align: center;
+}
+.left-txt
+{
+    text-align: left;
+}
+
+.right-txt
+{
+    text-align: right;
+}
+
+
+/* ######################################## BUTTONS #####################################*/
+button
+{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin: 5%;
+
+    background-color: transparent;
+    border-color: goldenrod;
+    color: white;
+
+    font-size: large;
+}
