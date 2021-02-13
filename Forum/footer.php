@@ -9,15 +9,15 @@
                     <table class="hrs_table">
                         <tr>
                             <td>Thurs</td>
-                            <td>&nbsp;&nbsp;9:30 PM - cls</td>
+                            <td>&nbsp;&nbsp;9:30PM - cls</td>
                         </tr>
                         <tr>
                             <td>Fri&nbsp;&nbsp;</td>
-                            <td>10:30 PM - cls</td>
+                            <td>10:30PM - cls</td>
                         </tr>
                         <tr>
                             <td>Sat&nbsp;&nbsp;</td>
-                            <td>10:30 PM - cls</td>
+                            <td>10:30PM - cls</td>
                         </tr>
                         </table>
                 </div>

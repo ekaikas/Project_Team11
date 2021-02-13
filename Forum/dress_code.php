@@ -7,7 +7,7 @@
 ?>    
   
 <div class="container bod">
-    <h1>FORUM DRESS CODE</h1>
+    <h1>Dress Code</h1>
     <p>
         Forum Nightclub enforces a strict dress code for access to the Nightclub. Please avoid all prohibited items so you’re not 
         denied entry into the venue. Fashionable nightclub attire is required. Dress code is strictly enforced with management 

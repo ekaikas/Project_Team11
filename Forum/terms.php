@@ -7,7 +7,7 @@
 ?>   
 
 <div class="container bod">
-    <h1>TERMS</h1>
+    <h1>Terms</h1>
     <h2>Introduction</h2>
     <p>
         These terms and conditions govern your use of this website; by using this website, you accept these terms and conditions in 
