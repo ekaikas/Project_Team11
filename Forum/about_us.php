@@ -2,7 +2,6 @@
     $title = "About Us-Forum";
     $meta_desc = "Forum Nightclub About Us";
     $meta_keywords = "who we are, introduction, forum, night club, party, mission, vision, description";
-    $css = "";
     include "header.php";
 ?>    
   
@@ -23,7 +22,7 @@
             </p>
         </div>
         <div class="col">
-            <img src="https://github.com/ekaikas/Project_Team11/blob/main/img/1490244.jpg" alt="people dancing in a night club">
+            <img src="Img/1490244.jpg" alt="people dancing in a night club">
         </div>
     </div>
 
@@ -37,7 +36,7 @@
         </div>
         <div class="col">
             <h2>Private Events</h2>
-            <img src="https://github.com/ekaikas/Project_Team11/blob/main/img/dj_deck_blurred.jpg" 
+            <img src="Img/dj_deck_blurred.jpg" 
             alt="blurred image of dj deck in nigh club" title="dj deck">
         </div>
     </div>

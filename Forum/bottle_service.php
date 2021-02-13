@@ -1,13 +1,12 @@
 <?php 
-    $title = "Dress Code-Forum";
-    $meta_desc = "Forum Nightclub Dress Code";
-    $meta_keywords = "dress code, forum, dress rules, smart casual, attire, wardrobe, fashionable";
-    $css = "";
+    $title = "Bottle Service-Forum";
+    $meta_desc = "Forum Nightclub Bottle Service";
+    $meta_keywords = "bottle service, VIP, booth, own bottle, menu, bottle prices, drinks, ciroq, grey goose, patron, hennessey vsop";
     include "header.php";
 ?>    
   
 <div class="container bod">
-    <h1>FORUM DRESS CODE</h1>
+    <h1>Bottle Service</h1>
 
 
     </div>

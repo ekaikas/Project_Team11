@@ -12,7 +12,7 @@
     <title>
         <?php echo "$title";?>
     </title>
-    <link href=<?php echo "$css";?> type="text/css" rel="stylesheet">
+    <link href=style_pages.css type="text/css" rel="stylesheet">
 <body>
     <header>
         <div class="container head">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col">
                     <!--logo-->
-                        <img class="header_logo" src="https://github.com/ekaikas/Project_Team11/blob/main/img/forum_logo.png" 
+                        <img class="header_logo" src="Img/forum_logo.png" 
                         alt="Forum company logo" title="Forum Logo">
                     </div>
                     <div class="col">
@@ -48,17 +48,17 @@
                             <ul class="social">
                                 <li>
                                     <a href="https://facebook.com" target="_blank">
-                                        <img src="fb_logo.png" alt="facebook logo" title="Facebook">
+                                        <img src="Img/fb_logo.png" alt="facebook logo" title="Facebook">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://instagram.com" target="_blank">
-                                        <img src="instagram_logo.png" alt="instagram logo" title="Instagram">
+                                        <img src="Img/instagram_logo.png" alt="instagram logo" title="Instagram">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://twitter.com" target="_blank">
-                                        <img src="twitter_logo.png" alt="twitter logo" title="Twitter">
+                                        <img src="Img/twitter_logo.png" alt="twitter logo" title="Twitter">
                                     </a>
                                 </li>
                             </ul>
@@ -66,13 +66,13 @@
                         <div class="row">
                         <!--bottom row for login and register-->
                             <ul class="login">
-                                <li style= display:inline>
+                                <li>
                                     <a href="#">Sign in</a>
                                 </li>
                                 <li>
                                     <a href="">|</a>
                                 </li>
-                                <li style= display:inline>
+                                <li>
                                     <a href="#">Register</a>
                                 </li>          
                             </ul>
