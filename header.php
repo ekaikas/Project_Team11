@@ -48,17 +48,17 @@
                             <ul class="social">
                                 <li>
                                     <a href="https://facebook.com" target="_blank">
-                                        <img src="Img/fb_logo.png" alt="facebook logo" title="Facebook">
+                                        <img class="sm" src="Img/fb_logo.png" alt="facebook logo" title="Facebook">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://instagram.com" target="_blank">
-                                        <img src="Img/instagram_logo.png" alt="instagram logo" title="Instagram">
+                                        <img class="sm" src="Img/instagram_logo.png" alt="instagram logo" title="Instagram">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://twitter.com" target="_blank">
-                                        <img src="Img/twitter_logo.png" alt="twitter logo" title="Twitter">
+                                        <img class="sm" src="Img/twitter_logo.png" alt="twitter logo" title="Twitter">
                                     </a>
                                 </li>
                             </ul>
@@ -67,13 +67,13 @@
                         <!--bottom row for login and register-->
                             <ul class="login">
                                 <li>
-                                    <a href="#">Sign in</a>
+                                    <a class="log" href="#">Sign In</a>
+                                </li>
+                                <li class="log">
+                                    |
                                 </li>
                                 <li>
-                                    <a href="">|</a>
-                                </li>
-                                <li>
-                                    <a href="#">Register</a>
+                                    <a class="log" href="#">Register</a>
                                 </li>          
                             </ul>
                         </div>

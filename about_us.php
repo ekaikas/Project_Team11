@@ -9,7 +9,7 @@
     <h1>About Us</h1>
 
     <div class="row">
-        <div class="col">
+        <div class="col ab1">
             <h2>Forum Nightclub</h2>
             <p>
                 Relax in an exclusive social environment with specialty cocktails, bottle service offerings, top hits, and the
@@ -18,25 +18,24 @@
             </p>
             <p>
                 Reservations:
-                Call us at <a href="tel:6468758000">646.875.8000</a> or <a href="#">Book Online</a>
+                Call us at <a class="links" href="tel:6468758000">(646)875-8000</a> or <button class="but" type="button" href="#">Book Online</button>
             </p>
         </div>
         <div class="col">
-            <img src="Img/1490244.jpg" alt="people dancing in a night club">
+            <img class="dancing" src="Img/1490244.jpg" alt="people dancing in a night club">
         </div>
     </div>
 
     <div class="row">
-        <div class="col">
-            <p></p>
+        <div class="col ab1">
+            <h2>Private Events</h2>
             Forum offers a versatile collection of spaces for everything from an intimate cocktail party to a full-scale event taking 
-            over the entire venue. The Special Events team can help to create a fully branded, immersive, and unique experience. <br>
-            For more information, contact us at <a href="tel:6468758008">646.875.8008</a> or via 
-            <a href="mailto:events@forumnightclub.com">email</a>.
+            over the entire venue. The Special Events team can help to create a fully branded, immersive, and unique experience. <br><br>
+            For more information, contact us at <a class="links" href="tel:6468758008">(646) 875-8008</a> or via 
+            <button class="but" href="mailto:events@forumnightclub.com" type="button">e-mail</button>
         </div>
         <div class="col">
-            <h2>Private Events</h2>
-            <img src="Img/dj_deck_blurred.jpg" 
+            <img class="dancing" src="Img/dj_deck_blurred.jpg" 
             alt="blurred image of dj deck in nigh club" title="dj deck">
         </div>
     </div>
