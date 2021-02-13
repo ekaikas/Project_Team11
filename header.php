@@ -39,7 +39,7 @@
                     </div>
                     <div class="col">
                     <!--logo-->
-                        <img class="header_logo" src="Img/forum_logo.png" 
+                        <img class="header_logo" src="/Project_Team11/Img/forum_logo.png" 
                         alt="Forum company logo" title="Forum Logo">
                     </div>
                     <div class="col">
