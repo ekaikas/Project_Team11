@@ -18,7 +18,14 @@
             </p>
             <p>
                 Reservations:
-                Call us at <a class="links" href="tel:6468758000">(646)875-8000</a> or <button class="but" type="button" href="#">Book Online</button>
+                <button class="but" type="button">
+                    <a class="links" href="tel:6468758000"> 
+                        <img class="phone" src="Img/email/phone1.png" alt="phone logo vector white">
+                    </a> 
+                </button>
+                <button class="but" type="button" href="#">
+                    <a class="but" href="contact_us.php">Book Online&nbsp;&nbsp;</a>
+                </button>
             </p>
         </div>
         <div class="col">
@@ -31,8 +38,17 @@
             <h2>Private Events</h2>
             Forum offers a versatile collection of spaces for everything from an intimate cocktail party to a full-scale event taking 
             over the entire venue. The Special Events team can help to create a fully branded, immersive, and unique experience. <br><br>
-            For more information, contact us at <a class="links" href="tel:6468758008">(646) 875-8008</a> or via 
-            <button class="but" href="mailto:events@forumnightclub.com" type="button">e-mail</button>
+            For more information, contact us at:
+            <button class="but" type="button">
+                <a class="links" href="tel:6468758008">
+                    <img class="phone" src="Img/email/phone1.png" alt="phone logo vector white">
+                </a>
+            </button> 
+            <button class="but" type="button">
+                <a class="links" href="mailto: events@forumnightclub.com">
+                    <img class="phone" src="Img/email/mail.png" alt="email logo vector white">
+                </a> 
+            </button>
         </div>
         <div class="col">
             <img class="dancing" src="Img/dj_deck_blurred.jpg" 

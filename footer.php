@@ -24,13 +24,13 @@
                     alt="Forum company logo" title="Forum Logo">
                     <ul class="policies">
                         <li>
-                            <a href="#">Privacy Policy</a>
+                            <a class="pol" href="privacy.php">Privacy Policy</a>
                         </li>
                         <li>
                             |
                         </li>
                         <li>
-                            <a href="#">Terms of Service</a>
+                            <a class="pol" href="terms.php">Terms of Service</a>
                         </li>
                     </ul>
                     <p class="copyright">
@@ -38,15 +38,14 @@
                     </p>
                 </div>
                 <div class="col foot_right">
-                    <p>
-                        <a 
-                        href="https://www.google.com/maps/dir//828+8th+Avenue,+New+York,+NY,+USA/@40.7620338,-73.988246,17z/data=
-                        !4m8!4m7!1m0!1m5!1m1!1s0x89c25856f51a759b:0xad66aa0db5a07192!2m2!1d-73.9860573!2d40.7620338">828 8th Avenue <br>
-                        New York, NY 10001
-                    </p>
-                    <a href="tel:6468758000">Tel: 646.875.8000</a> <br>
- 
-                    <a href="#">Contact Us</a>
+                    <a 
+                    href="https://www.google.com/maps/dir//828+8th+Avenue,+New+York,+NY,+USA/@40.7620338,-73.988246,17z/data=
+                    !4m8!4m7!1m0!1m5!1m1!1s0x89c25856f51a759b:0xad66aa0db5a07192!2m2!1d-73.9860573!2d40.7620338">828 8th Avenue <br>
+                    New York, NY 10001 <br>
+                    <a href="tel:6468758000">Tel: (646) 875-8000</a> <br>
+                    <button class="but_foot">
+                        <a href="contact_us.php">Contact Us</a>
+                    </button>
 
                 </div>
             </div>

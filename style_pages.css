@@ -4,7 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("Img/bk2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+a:hover {
+  color: snow;}
 
 /********  header  ********************/
 
@@ -18,6 +23,11 @@ ul li {
 
 .login {
   text-align: right;
+}
+
+.log:hover {
+  padding: 3px 3px 3px 3px;
+  border: 2px solid goldenrod;
 }
 
 .social {
@@ -174,6 +184,7 @@ li a {
 footer {
   background: black; 
   color: snow;
+  margin-top: 25px;
 }
 
 .foot_left {
@@ -217,7 +228,27 @@ li a {
   text-decoration: none;
 }
 
-/**********************  about us ***************/
+.policies {
+  margin: 28px 0 -5px 0;
+}
+
+.but_foot {
+  background-color: black;
+  box-shadow: snow;
+  width: 130px;
+}
+
+.but_foot:hover {
+  padding: 3px 3px 3px 3px;
+  border: 2px solid goldenrod;
+}
+
+.pol:hover {
+  padding: 1px 1px 1px 1px;
+  border: 2px solid goldenrod;
+}
+
+/**********************  pages ***************/
 
 .dancing {
   height: auto;
@@ -227,7 +258,7 @@ li a {
 }
 
 .ab1 {
-  background-color: rgb(47, 50, 79);
+  background-color: rgb(78, 79, 92);
   color: snow;
   opacity: 0.8;
   margin: 48px -12px 48px 72px;
@@ -238,6 +269,11 @@ li a {
 .but {
   color: snow;
   background-color:  rgba(42, 34, 53, 0.925);
+  height: 39px;
+  width: auto;
+  text-decoration: none;
+  margin: 0 0 0 12px;
+  padding: 3px 3px 3px 3px;
 }
 
 .links {
@@ -255,4 +291,8 @@ h1 {
   font-weight: 900;
 }
 
+.phone {
+  height: 28px;
+  width: auto;
+}
 

@@ -27,20 +27,22 @@
                                 <span></span>
                         
                             <ul id="menu">
-                                <a href="#"><li>Home</li></a>
-                                <a href="#"><li>Bottle Service</li></a>
-                                <a href="#"><li>Tickets</li></a>
-                                <a href="#"><li>About Us</li></a>
-                                <a href="#"><li>Dress Code</li></a>
-                                <a href="#"><li>Careers</li></a>
-                                <a href="#"><li>Contact Us</li></a>
+                                <a href="index.php"><li>Home</li></a>
+                                <a href="bottle_service.php"><li>Bottle Service</li></a>
+                                <a href="tickets.php"><li>Tickets</li></a>
+                                <a href="about_us.php"><li>About Us</li></a>
+                                <a href="dress_code.php"><li>Dress Code</li></a>
+                                <a href="careers.php"><li>Careers</li></a>
+                                <a href="contact_us.php"><li>Contact Us</li></a>
                             </ul>
                         </div>
                     </div>
                     <div class="col">
                     <!--logo-->
-                        <img class="header_logo" src="Img/forum_logo.png" 
-                        alt="Forum company logo" title="Forum Logo">
+                        <a href="index.php">
+                            <img class="header_logo" src="Img/forum_logo.png" 
+                            alt="Forum company logo" title="Forum Logo">
+                        </a>
                     </div>
                     <div class="col">
                         <div class="row">
