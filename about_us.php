@@ -23,7 +23,7 @@
                     </a> 
                 </button>
                 <button class="but" type="button" href="#">
-                    <a class="but" href="contact_us.php">Book Online&nbsp;&nbsp;</a>
+                    <a class="but" href="tickets.php">Tickets&nbsp;&nbsp;</a>
                 </button>
             </p>
         </div>

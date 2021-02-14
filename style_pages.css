@@ -301,4 +301,18 @@ h1 {
   display: block;
 }
 
+.btl {
+  display: block;
+  margin: 24px auto 24px auto;
+  width: 60%;
+  height: auto;
+}
 
+.headmove {
+  padding-left: 129px;
+}
+
+.btl_btns {
+  padding-top: 6px;
+  color: black;
+}
