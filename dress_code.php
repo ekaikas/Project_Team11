@@ -4,18 +4,17 @@
     $meta_keywords = "dress code, forum, dress rules, smart casual, attire, wardrobe, fashionable";
     include "header.php";
 ?>    
-  
-<div class="container bod">
-    <h1>Dress Code</h1>
+<h1>Dress Code</h1>
+<div class="container terms_service">
     <p>
         Forum Nightclub enforces a strict dress code for access to the Nightclub. Please avoid all prohibited items so you’re not 
         denied entry into the venue. Fashionable nightclub attire is required. Dress code is strictly enforced with management 
-        discretion.
+        discretion. <br><br>
     </p>
     <h2>Prohibited Items:</h2>
     <div class="row">
         <div class="col">
-            <ul>
+            <ul class="reg_list">
                 <li>Athletic gear and apparel</li>
                 <li>Shorts</li>
                 <li>Torn or cut off clothing</li>
@@ -28,7 +27,7 @@
             </ul>
         </div>
         <div class="col">
-            <ul>
+            <ul class="reg_list">
                 <li>Baggy Clothing</li>
                 <li>Chains</li>
                 <li>Offensive prints on clothing</li>
@@ -41,7 +40,7 @@
             </ul>
         </div>
         <div class="col">
-            <ul>
+            <ul class="reg_list">
                 <li>Vitamins</li>
                 <li>Supplements</li>
                 <li>Over-the-counter medications</li>
@@ -55,13 +54,13 @@
         </div>
     </div>
     <p>
-        Any devices found in use will be confiscated and disposed of by management without compensations. Guests noticeable intoxicated 
-        or under the influence of a controlled substance will be denied entry and will not be eligible to receive a refund.
+        Any devices found in use will be confiscated and disposed of by management without compensations. Guests noticeably intoxicated 
+        or under the influence of a controlled substance will be denied entry and will not be eligible to receive a refund. <br><br>
     </p>
     <p>All persons, bags and personal items are subject to search.</p>
     <p>If you remove your shoes you will be immediately escorted out of the venue.</p>
     <p>We have a zero tolerance policy.</p>
-    <p>You must be at lease 18 years old with a valid ID to enter.</p>
+    <p>You must be at lease 18 years old with a valid ID to enter. <br><br></p>
     <h2>Things to Know:</h2>
     <p>
         This is a general admission showroom, standing room only. Please note seats are not accessible. <br>

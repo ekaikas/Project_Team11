@@ -6,6 +6,11 @@ body {
     background-image: url("Img/bk2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: snow;
+}
+
+a {
+  color: snow;
 }
 
 a:hover {
@@ -36,10 +41,6 @@ ul li {
 
 li a {
   text-decoration: none;
-}
-
-.log {
-  color: snow;
 }
 
 .header_logo {
@@ -183,7 +184,6 @@ li a {
 
 footer {
   background: black; 
-  color: snow;
   margin-top: 25px;
 }
 
@@ -210,19 +210,11 @@ h3 {
   font-size: .8rem;
 }
 
-.foot_right a {
-  color: snow;
-}
-
 .footsie_logo {
   height: 55px;
   width: auto;
   padding-bottom: 24px;
 } 
-
-li a {
-  color: snow;
-}
 
 .foot_right a {
   text-decoration: none;
@@ -254,20 +246,20 @@ li a {
   height: auto;
   width: 550px;
   margin: 0px 0 36px 0;
-  box-shadow: 4px 4px black;
+  box-shadow: 4px 4px rgb(44, 43, 43);
 }
 
-.ab1 {
-  background-color: rgb(78, 79, 92);
-  color: snow;
+.about {
+  background-color: rgb(36, 38, 68);
   opacity: 0.8;
   margin: 48px -12px 48px 72px;
-  padding: 22px 0px 18px 32px;
-  box-shadow: 4px 4px black;
+  padding: 22px 24px 18px 32px;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .but {
-  color: snow;
   background-color:  rgba(42, 34, 53, 0.925);
   height: 39px;
   width: auto;
@@ -277,7 +269,6 @@ li a {
 }
 
 .links {
-  color: snow;
   text-decoration: none;
 }
 
@@ -286,13 +277,28 @@ h2 {
 }
 
 h1 {
-  margin: 34px 0px -12px 280px;
+  margin: 24px 0px -18px 172px;
   color: black;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .phone {
   height: 28px;
   width: auto;
 }
+
+.terms_service {
+  margin-top: 24px;  
+  background-color: rgb(36, 38, 68);
+  opacity: 0.8;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  padding: 32px 24px 24px 24px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.reg_list li {
+  display: block;
+}
+
 

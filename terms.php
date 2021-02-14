@@ -6,8 +6,8 @@
     include "header.php";
 ?>   
 
-<div class="container bod">
-    <h1>Terms</h1>
+<h1>Terms</h1>
+<div class="container terms_service">
     <h2>Introduction</h2>
     <p>
         These terms and conditions govern your use of this website; by using this website, you accept these terms and conditions in 
@@ -165,7 +165,7 @@
     </p>
     <h2>Forum's details</h2>
     <p>
-        Forum's address is 828 8th Avenue New York, NY 10001 United States.
+        Forum's address is 828 8th Avenue New York, NY 10001 United States. 
     </p>
 </div>
 

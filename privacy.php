@@ -4,9 +4,9 @@
     $meta_keywords = "dress code, forum, dress rules, smart casual, attire, wardrobe, fashionable";
     include "header.php";
 ?>    
-  
-<div class="container bod">
-    <h1>Privacy Policy</h1>
+
+<h1>Privacy Policy</h1>
+<div class="container terms_service">
     <h2>WHAT INFORMATION DO WE COLLECT?</h2>
     <p>
         We collect information from you when you subscribe to our newsletter or fill out a form. <br>
@@ -19,16 +19,20 @@
     <h2>WHAT DO WE USE YOUR INFORMATION FOR?</h2>
     <p>
         Any of the information we collect from you may be used in one of the following ways: 
-        <ul>
-            <li>
-                To contact you following the form you filled out. Your information, whether public or private, will not be sold, exchanged, 
-                transferred, or given to any other company for any reason whatsoever, without your consent, other than for the express purpose 
-                of delivering the purchased product or service requested.
-            </li>
-            <li>To send periodic emails. The email address you provide for order processing will only be used to send you information and updates 
-                pertaining to your order. Note: If at any time you would like to unsubscribe from receiving future emails, contact us with the 
-                subject “unsubscribe’.
-            </li>
+        <ul>    
+            <p>
+                <li>
+                    To contact you following the form you filled out. Your information, whether public or private, will not be sold, exchanged, 
+                    transferred, or given to any other company for any reason whatsoever, without your consent, other than for the express purpose 
+                    of delivering the purchased product or service requested. 
+                </li>
+            </p>
+            <p>
+                <li>To send periodic emails. The email address you provide for order processing will only be used to send you information and updates 
+                    pertaining to your order. Note: If at any time you would like to unsubscribe from receiving future emails, contact us with the 
+                    subject “unsubscribe’.
+                </li>
+            </p>
         </ul>
     </p> 
     <h2>HOW DO WE PROTECT YOUR INFORMATION?</h2>
@@ -68,7 +72,10 @@
     </p>
     <h2>CONTACTING US</h2>
     <p>
-        If there are any questions regarding this privacy policy you may contact us to info@forumnightclub.com
+        If there are any questions regarding this privacy policy you may contact us at 
+        <a href="mailto: info@forumnightclub.com">
+            <img class="phone" src="Img/email/mail.png" alt="white logo vector of mail">
+        </a>
     </p>
 </div>
 
