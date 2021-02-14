@@ -304,7 +304,7 @@ h1 {
 .btl {
   display: block;
   margin: 24px auto 24px auto;
-  width: 60%;
+  width: 59%;
   height: auto;
 }
 
@@ -314,5 +314,21 @@ h1 {
 
 .btl_btns {
   padding-top: 6px;
+  color: black;
+}
+
+/***************forms******************************/
+
+form {
+  background-color: rgb(36, 38, 68);
+  opacity: 0.8;
+  margin: 24px -23px 48px 60px;
+  padding: 22px 24px 18px 32px;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+hr {
   color: black;
 }
