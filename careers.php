@@ -4,6 +4,7 @@
     $meta_keywords = "career, job, employment, join us, join our team, work, bartender, server, bottle service, nigh club, nightclub, hospitality";
     include "header.php";
 ?>    
+
 <h1>Careers</h1>
 <div class="container bod">  
     <div class="row">
