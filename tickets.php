@@ -18,7 +18,9 @@
                         <!--t_event-->
                         <select name="t_event">
                             <option value="NULL">--select--</option>
-                            
+                            <option value="Full Moon Party">Full Moon Party</option>
+                            <option value="The Summer Party">The Summer Party</option>
+                            <option value="Pool Party">Pool Party</option>
                         </select>
                     </div>
                 </div>
@@ -92,10 +94,44 @@
             </form>
         </div>
         <div class="col">
-            event image slideshow here
+            <div class="container mt-3">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ul>
+                
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="eventpic" src="Img/events/1.jpg" alt="event image for valentines day">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="eventpic" src="Img/events/2.jpg" alt="summer flyer for event">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="eventpic" src="Img/events/3.jpg" alt="beach party flyer for event">
+                    </div>
+                </div>
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <?php include "footer.php";
 ?>
