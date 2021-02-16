@@ -337,6 +337,13 @@ form {
   box-shadow: 4px 4px rgb(44, 43, 43);
 }
 
+.contactpic {
+  height: auto;
+  width: 550px;
+  margin: 24px 0 36px 0;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+}
+
 .frm hr {
   color: black;
 }

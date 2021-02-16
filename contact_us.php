@@ -4,58 +4,88 @@
     $meta_keywords = "contact, address, phone number, map, hours, hours of operation, opening hours, open, closed, close time, forum hours";
     include "header.php";
 ?>    
-  
-<div class="container bod">
-    <h1>Contact Us</h1>
-        <div class="row">
-            <div class="col contact_form">
-                CONTACT TABLE HERE
-                fields:
 
-                regarding: 
-                enum("General Inquiry", "Private Event", "Bottle Service", "Press Inquiry", "Representatives")
-                name*
-                email*
-                phone*
-                subject*
-                message*
-                captcha
-                send button
-
-                ...note... if signed in grab username
-                add all data to customer database
-
-                Fields marked by an asterisk (*) are mandatory
-            </div>
-            <div class="col">
+<h1>Contact Us</h1>
+<div class="container frm">
+    <div class="row">
+        <div class="col formcss">
+            <!--insert db file: insert_contact.php-->
+            <form name="contact_form" action="insert_contact.php" method="post">
                 <div class="row">
-                   <div class="col">
-                        Address: <br>
-                        828 8th Avenue <br>
-                        New York, NY 10001 <br>
-                   </div>
-                    <div class="col">
-                        <img class="map" src="https://github.com/ekaikas/Project_Team11/blob/main/img/location.jpg?raw=true" 
-                        alt="map showing location of Forum Nighclub" title="Forum Location">
+                    <div class="col-25">
+                        <label for="contact_reg">Regarding</label>
+                    </div>
+                    <div class="col-75">
+                        <!--contact_reg-->
+                        <select name="contact_reg">
+                            <option value="NULL">--select--</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Private Event">Private Event</option>
+                            <option value="Bottle Service">Bottle Service</option>
+                            <option value="Press Inquiry">Press Inquiry</option>
+                            <option value="Reps">Reps</option>
+                        </select>
                     </div>
                 </div>
+                <hr>
                 <div class="row">
-                    <p>
-                        Reservations: <br>
-                        <a href="tel:6468758000">646.875.8000</a> <br>
-                        <a href="mailto:info@forumnightclub.com">general emails</a>
-                    </p>
-                    <p>
-                        Events: <br>
-                        <a href="tel:6468758008">646.875.8008</a> <br>
-                        <a href="mailto:events@forumnightclub.com">events emails</a>
-                    </p>
-                </p>
-                <img src="https://github.com/ekaikas/Project_Team11/blob/main/img/contactus.jpg?raw=true" 
-                alt="image of text saying loney for you" title="Contact Image">
-            </div>
+                    <div class="col-25">
+                        <label for="contact_fname">First Name</label>
+                    </div>
+                    <div class="col-75">
+                        <!--contact_fname-->
+                        <input type="text" name="contact_fname" placeholder="Your first name..">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="contact_lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <!--contact_lname-->
+                        <input type="text" name="contact_lname" placeholder="Your last name..">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="contact_phone">Phone</label>
+                    </div>
+                    <div class="col-75">
+                        <!--contact_phone-->
+                        <input type="text" name="contact_phone" placeholder="Your number..">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="contact_email">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <!--contact_email-->
+                        <input type="text" name="contact_email" placeholder="Your email..">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="ccontact_msg">Message</label>
+                    </div>
+                    <div class="col-75">
+                        <!--contact_msg-->
+                        <textarea name="contact_msg" placeholder="What would make you a good addition to our team.." style="height:200px"></textarea>
+                    </div>
+                </div>
+                <input class="form_btn" type="submit" value="Send">
+            </form>
+        </div>
+        <div class="col">
+            <img class="contactpic" src="Img/contactus.jpg?raw=true" alt="image of text saying lonely for you"
+            title="Contact Image">
         </div>
     </div>
+</div>  
 
 <?php include "footer.php";
 ?>
