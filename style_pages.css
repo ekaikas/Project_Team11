@@ -247,6 +247,8 @@ h3 {
   width: 550px;
   margin: 0px 0 36px 0;
   box-shadow: 4px 4px rgb(44, 43, 43);
+  border-radius: 4px;
+  resize: vertical;
 }
 
 .about {
@@ -257,6 +259,8 @@ h3 {
   box-shadow: 4px 4px rgb(44, 43, 43);
   text-align: justify;
   text-justify: inter-word;
+  border-radius: 4px;
+  resize: vertical;
 }
 
 .but {
@@ -296,6 +300,8 @@ h1 {
   padding: 32px 24px 24px 24px;
   text-align: justify;
   text-justify: inter-word;
+  border-radius: 4px;
+  resize: vertical;
 }
 
 .reg_list li {
@@ -328,6 +334,8 @@ form {
   box-shadow: 4px 4px rgb(44, 43, 43);
   text-align: justify;
   text-justify: inter-word;
+  border-radius: 8px;
+  resize: vertical;
 }
 
 .careerpic {
@@ -335,6 +343,8 @@ form {
   width: 550px;
   margin: 20px 0 36px 0;
   box-shadow: 4px 4px rgb(44, 43, 43);
+  border-radius: 4px;
+  resize: vertical;
 }
 
 .contactpic {
@@ -342,6 +352,8 @@ form {
   width: 550px;
   margin: 24px 0 36px 0;
   box-shadow: 4px 4px rgb(44, 43, 43);
+  border-radius: 4px;
+  resize: vertical;
 }
 
 .frm hr {
@@ -352,17 +364,18 @@ form {
   background-color: rgba(36, 38, 68, 0.76);
   color: snow;
   padding: 3px 12px 3px 12px;
+  margin-top: 12px;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.frm input[type=text], select, textarea {
+.frm input, select, textarea {
   width: 100%;
   padding: 6px;
-  border: 1px solid snow;
-  border-radius: 4px;
+  border: 1px solid none;
+  border-radius: 8px;
   resize: vertical;
 }
 
