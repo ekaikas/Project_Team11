@@ -1,9 +1,10 @@
 <?php 
-    $title = "Tickets-Forum";
+    $title = "Tickets | Forum Nightclub";
     $meta_desc = "Forum Nightclub Tickets";
     $meta_keywords = "events, tickets, concert, dj, party, pre-purchase, online tickets, show pass, press pass";
     include "header.php";
-?>    
+?> 
+
 <h1>Tickets</h1> 
 <div class="container frm">  
     <div class="row">

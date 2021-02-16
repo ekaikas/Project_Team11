@@ -1,5 +1,5 @@
 <?php 
-    $title = "Contact Us-Forum";
+    $title = "Contact Us | Forum Nightclub";
     $meta_desc = "Contact Us at Forum Nightclub";
     $meta_keywords = "contact, address, phone number, map, hours, hours of operation, opening hours, open, closed, close time, forum hours";
     include "header.php";

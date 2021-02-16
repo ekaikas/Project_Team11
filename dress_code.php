@@ -1,5 +1,5 @@
 <?php 
-    $title = "Dress Code-Forum";
+    $title = "Dress Code | Forum Nightclub";
     $meta_desc = "Forum Nightclub Dress Code";
     $meta_keywords = "dress code, forum, dress rules, smart casual, attire, wardrobe, fashionable";
     include "header.php";

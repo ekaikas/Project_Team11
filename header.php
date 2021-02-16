@@ -13,6 +13,8 @@
         <?php echo "$title";?>
     </title>
     <link href=style_pages.css type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="Img/favicon.ico" />
+</head>
 <body>
     <header>
         <div class="container head">

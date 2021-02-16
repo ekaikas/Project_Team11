@@ -1,5 +1,5 @@
 <?php 
-    $title = "About Us-Forum";
+    $title = "About Us | Forum Nightclub";
     $meta_desc = "Forum Nightclub About Us";
     $meta_keywords = "who we are, introduction, forum, night club, party, mission, vision, description";
     include "header.php";

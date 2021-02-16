@@ -1,5 +1,5 @@
 <?php 
-    $title = "Terms-Forum";
+    $title = "Terms | Forum Nightclub";
     $meta_desc = "Forum Nightclub Terms of Service";
     $meta_keywords = "terms of service, contract, obligations, regulations, policy";
     $css = "";
