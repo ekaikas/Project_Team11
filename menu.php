@@ -8,7 +8,7 @@
 <div class="container bod">
     <div class="row">
         <div class="col-md-8 headmove">
-            <h1 class="btl">Bottle Service Menu</h1>
+            <h1 class="btl">Bottle Service</h1>
         </div>
         <div class="col">
             <div class="btl_btns">

@@ -221,7 +221,7 @@ h3 {
 }
 
 .policies {
-  margin: 28px 0 -5px 0;
+  margin: 28px 0 -1px 0;
 }
 
 .but_foot {
@@ -277,7 +277,8 @@ h2 {
 }
 
 h1 {
-  margin: 24px 0px -18px 172px;
+  text-align: center;
+  padding: 12px 68px 0px 0px;
   color: black;
   font-weight: 800;
 }
@@ -322,13 +323,75 @@ h1 {
 form {
   background-color: rgb(36, 38, 68);
   opacity: 0.8;
-  margin: 24px -23px 48px 60px;
-  padding: 22px 24px 18px 32px;
+  margin: 0px -23px 48px 60px;
+  padding: 22px 32px 18px 32px;
   box-shadow: 4px 4px rgb(44, 43, 43);
   text-align: justify;
   text-justify: inter-word;
 }
 
-hr {
+.careerpic {
+  height: auto;
+  width: 550px;
+  margin: 20px 0 36px 0;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+}
+
+.frm hr {
   color: black;
+}
+
+.form_btn {
+  background-color: rgba(36, 38, 68, 0.76);
+  color: snow;
+  padding: 3px 12px 3px 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.frm input[type=text], select, textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid snow;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.frm label {
+  padding: 3px 3px 3px 0;
+  display: inline-block;
+}
+
+.container {
+  border-radius: 1px;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.frm .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .frm .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }

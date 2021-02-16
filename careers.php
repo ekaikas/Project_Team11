@@ -6,7 +6,7 @@
 ?>    
 
 <h1>Careers</h1>
-<div class="container bod">  
+<div class="container frm">  
     <div class="row">
         <div class="col formcss">
             <!--insert db file: insert_cv.php-->
@@ -33,7 +33,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-25">
-                        <label for="cv_phone">Phone Number</label>
+                        <label for="cv_phone">Phone</label>
                     </div>
                     <div class="col-75">
                         <!--cv_phone-->
@@ -53,7 +53,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-25">
-                        <label for="cv_pos">Desired Position</label>
+                        <label for="cv_pos">Position</label>
                     </div>
                     <div class="col-75">
                         <!--cv_pos-->
@@ -101,7 +101,7 @@
             </form>
         </div>
         <div class="col">
-            <img class="dancing" src="Img/team.jpg" alt="bottle service girls holding up merchandise">
+            <img class="careerpic" src="Img/team.jpg" alt="bottle service girls holding up merchandise">
         </div>
     </div>
 
