@@ -27,12 +27,12 @@
                                 <span></span>
                         
                             <ul id="menu">
-                                <a href="index.php"><li>Home</li></a>
-                                <a href="bottle_service.php"><li>Bottle Service</li></a>
-                                <a href="tickets.php"><li>Tickets</li></a>
-                                <a href="about_us.php"><li>About Us</li></a>
-                                <a href="dress_code.php"><li>Dress Code</li></a>
-                                <a href="careers.php"><li>Careers</li></a>
+                                <a href="index.php"><li>Home</li></a><hr>
+                                <a href="bottle_service.php"><li>Bottle Service</li></a><hr>
+                                <a href="tickets.php"><li>Tickets</li></a><hr>
+                                <a href="about_us.php"><li>About Us</li></a><hr>
+                                <a href="dress_code.php"><li>Dress Code</li></a><hr>
+                                <a href="careers.php"><li>Careers</li></a><hr>
                                 <a href="contact_us.php"><li>Contact Us</li></a>
                             </ul>
                         </div>
@@ -84,3 +84,4 @@
             </nav>    
         </div>
     </header>
+    
