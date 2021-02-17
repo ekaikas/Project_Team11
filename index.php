@@ -46,13 +46,16 @@
             </li>
             <li>
                 <a href="https://instagram.com" target="_blank">
-                    &nbsp;&nbsp;<img class="sm" src="Img/instagram.png" alt="instagram logo" title="Instagram">
+                    <img class="sm" src="Img/instagram.png" alt="instagram logo" title="Instagram">
                 </a>
             </li>
             <li>
                 <a href="https://twitter.com" target="_blank">
                     <img class="sm" src="Img/twitter.png" alt="twitter logo" title="Twitter">
                 </a>
+            </li>
+            <li>
+                <a class="log" href="#">login</a><a class="log" href="#">register</a>
             </li>
         </ul>
     </section>
