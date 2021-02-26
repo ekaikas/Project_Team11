@@ -73,13 +73,8 @@
                         <label for="cv_file">Upload CV</label>
                     </div>
                     <div class="col-75">
-<<<<<<< HEAD
-                        <!--cv_file-->
-                        <input class="form_btn" type="file" name="cv_file" accept="application/pdf,application/word,application/txt">
-=======
                         <!--cv_file-->                        
                         <input type="file" name="cv_file" accept="application/pdf,application/word,application/txt">
->>>>>>> 8ee041712be5f4a7863e6036405df88e55e1f1e3
                     </div>
                 </div>
                 <hr>
@@ -89,11 +84,7 @@
                     </div>
                     <div class="col-75">
                         <!--cv_img-->
-<<<<<<< HEAD
-                        <input class="form_btn" type="file" name="cv_img" accept="image/png,image/jpg,image/bmp">
-=======
                         <input type="file" name="cv_img" accept="image/png,image/jpg,image/bmp">
->>>>>>> 8ee041712be5f4a7863e6036405df88e55e1f1e3
                     </div>
                 </div>
                 <hr>
