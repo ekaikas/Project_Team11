@@ -9,7 +9,7 @@ $row= mysqli_fetch_array($result);
 <title>Update Employee Data</title>
 </head>
 <body>
-<form method="post" action="">
+<form method="post" action="update.php">
 <div><?php if(isset($message)) { echo $message; } ?>
 </div>
 First Name: <br>
