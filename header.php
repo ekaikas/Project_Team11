@@ -39,7 +39,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col logo_background">
                     <!--logo-->
                         <a href="index.php">
                             <img class="header_logo" src="Img/forum_logo.png" 
