@@ -1,9 +1,5 @@
 <?php 
-<<<<<<< HEAD
-    $title = "Careers-Forum";
-=======
     $title = "Careers | Forum Nightclub";
->>>>>>> 8ee041712be5f4a7863e6036405df88e55e1f1e3
     $meta_desc = "Forum Nightclub Careers";
     $meta_keywords = "career, job, employment, join us, join our team, work, bartender, server, bottle service, nigh club, nightclub, hospitality";
     include "header.php";
