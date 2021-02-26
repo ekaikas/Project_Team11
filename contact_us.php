@@ -74,7 +74,7 @@
                     </div>
                     <div class="col-75">
                         <!--contact_msg-->
-                        <textarea name="contact_msg" placeholder="What would make you a good addition to our team.." style="height:200px"></textarea>
+                        <textarea name="contact_msg" placeholder="Your message here.." style="height:200px"></textarea>
                     </div>
                 </div>
                 <input class="form_btn" type="submit" value="Send">
