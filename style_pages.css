@@ -1,0 +1,426 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;
+    background-image: url("Img/bk2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: snow;
+}
+
+a {
+  color: snow;
+}
+
+a:hover {
+  color: snow;}
+
+/********  header  ********************/
+
+header {
+    background: black;
+}
+
+ul li {
+  display: inline;
+}
+
+.login {
+  text-align: right;
+}
+
+.log:hover {
+  padding: 3px 3px 3px 3px;
+  border: 2px solid goldenrod;
+}
+
+.social {
+  text-align: right;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.header_logo {
+  height: 88px;
+  margin: 12px 0 12px 102px;
+  padding: 5px 18px 0px 18px;
+  width: auto;
+  text-align: c;
+}
+
+.sm {
+  margin-top: 18px;
+  padding-right: 11px;
+  height: 20px;
+  width: auto;;
+}
+
+/*****************  hamburger menu  *************************************/
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 39px;
+  left: 65px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: snow;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: goldenrod;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: snow;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: snow;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 211px;
+  margin: -100px 0px 0px -50px;
+  padding: 38px;
+  padding-top: 125px;
+  text-align: center;
+  
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-300%, 0);
+  
+  transition: transform 0.8s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 0px 3px 0px 3px;
+  font-size: 18px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/*****************  footer  *********************/
+
+footer {
+  background: black; 
+  margin-top: 25px;
+}
+
+.foot_left {
+  text-align: left;
+  padding-top: 18px;
+}
+
+.foot_center {
+  text-align: center;
+  padding-top: 18px;
+}
+
+.foot_right {
+  text-align: right;
+  padding-top: 18px;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+.copyright {
+  font-size: .8rem;
+}
+
+.footsie_logo {
+  height: 55px;
+  width: auto;
+  padding-bottom: 24px;
+} 
+
+.foot_right a {
+  text-decoration: none;
+}
+
+.policies {
+  margin: 28px 0 -1px 0;
+}
+
+.but_foot {
+  background-color: black;
+  box-shadow: snow;
+  width: 130px;
+}
+
+.but_foot:hover {
+  padding: 3px 3px 3px 3px;
+  border: 2px solid goldenrod;
+}
+
+.pol:hover {
+  padding: 1px 1px 1px 1px;
+  border: 2px solid goldenrod;
+}
+
+/**********************  pages ***************/
+
+.dancing {
+  height: auto;
+  width: 550px;
+  margin: 0px 0 36px 0;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.about {
+  background-color: rgb(36, 38, 68);
+  opacity: 0.8;
+  margin: 48px -12px 48px 72px;
+  padding: 22px 24px 18px 32px;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  text-align: justify;
+  text-justify: inter-word;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.but {
+  background-color:  rgba(42, 34, 53, 0.925);
+  height: 39px;
+  width: auto;
+  text-decoration: none;
+  margin: 0 0 0 12px;
+  padding: 3px 3px 3px 3px;
+}
+
+.links {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h1 {
+  text-align: center;
+  padding: 12px 68px 0px 0px;
+  color: black;
+  font-weight: 800;
+}
+
+.phone {
+  height: 28px;
+  width: auto;
+}
+
+.terms_service {
+  margin-top: 24px;  
+  background-color: rgb(36, 38, 68);
+  opacity: 0.8;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  padding: 32px 24px 24px 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.reg_list li {
+  display: block;
+}
+
+.btl {
+  display: block;
+  margin: 24px auto 24px auto;
+  width: 59%;
+  height: auto;
+}
+
+.headmove {
+  padding-left: 129px;
+}
+
+.btl_btns {
+  padding-top: 6px;
+  color: black;
+}
+
+/***************forms******************************/
+
+form {
+  background-color: rgb(36, 38, 68);
+  opacity: 0.8;
+  margin: 0px -23px 48px 60px;
+  padding: 22px 32px 18px 32px;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  text-align: justify;
+  text-justify: inter-word;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.careerpic {
+  height: auto;
+  width: 550px;
+  margin: 20px 0 36px 0;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.eventpic {
+  width: 510px;
+  height: 550px;
+  margin-left: 39px;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.contactpic {
+  height: auto;
+  width: 550px;
+  margin: 24px 0 36px 0;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.frm hr {
+  color: black;
+}
+
+.form_btn {
+  background-color: rgba(36, 38, 68, 0.76);
+  color: snow;
+  padding: 3px 12px 3px 12px;
+  margin-top: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.frm input, select, textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid none;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.frm label {
+  padding: 3px 3px 3px 0;
+  display: inline-block;
+}
+
+.container {
+  border-radius: 1px;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.frm .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .frm .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
