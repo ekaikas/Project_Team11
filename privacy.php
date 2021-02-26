@@ -73,7 +73,7 @@
     <h2>CONTACTING US</h2>
     <p>
         If there are any questions regarding this privacy policy you may contact us at 
-        <a href="mailto: info@forumnightclub.com">
+        <a href="mailto:info@forumnightclub.com">
             <img class="phone" src="Img/email/mail.png" alt="white logo vector of mail">
         </a>
     </p>

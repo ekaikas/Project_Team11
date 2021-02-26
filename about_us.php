@@ -44,7 +44,7 @@
                 </a>
             </button> 
             <button class="but" type="button">
-                <a class="links" href="mailto: events@forumnightclub.com">
+                <a class="links" href="mailto:events@forumnightclub.com">
                     <img class="phone" src="Img/email/mail.png" alt="email logo vector white">
                 </a> 
             </button>
