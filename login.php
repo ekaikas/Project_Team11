@@ -6,28 +6,20 @@ $email = trim($_POST['email']);
 $password = trim($_POST['password']);
 
 
-
-$sql = "select id from users where email = '$email' and password = '$password'";
+$sql = "select id, username from users where email = '$email' and password = '$password'";
 $result = $conn->query($sql);
 if($result ->num_rows > 0) 
 {
-    $_SESSION["id"] = $sql;
-    //$error_msg = "";    
-    //header("location: index.php");
+    if($row = $result ->fetch_assoc())
+    {
+        $_SESSION["id"] = $row['id'];
+        $_SESSION["username"] = $row['username'];
+    }    
 }
 else 
 {
-
-    //$message = "Username and/or Password incorrect. Try again.";
-    //echo "<script type='text/javascript'>alert('$message');</script>";
-
-    //die();
-    //echo $_SESSION["id"];
-    //echo "Wrong email and password.";
-    //$error_msg = "Wrong email and password.";
-
+    //do something
 }
-
 
 $conn->close();
 ?>

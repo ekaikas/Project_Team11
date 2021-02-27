@@ -16,15 +16,16 @@ values('$name', '$username', '$password', '$email', '$timestamp')"; # update to 
 
 if (empty($name && $username && $email && $password))
 {
-    echo'All fields are required!';
-    echo "<a href='registration.php'> Return </a>";
+    //echo'All fields are required!';
+    //echo "<a href='registration.php'> Return </a>";
 }
 else
 {
     if($conn->query($sql) === TRUE) 
     {
-        echo "New record added";
-        echo "<a href='update.php' class='top'>Home </a>";
+        //echo "New record added";
+        //echo "<a href='update.php' class='top'>Home </a>";
+        header("location: Login_Page.php");
     }
     else
     {
@@ -35,13 +36,3 @@ else
 $conn->close();
 
 ?>
-
-<form name= "registration" method="post" action="registration.php">
-    Username: <input type="text" name="username"><br>
-    Name: <input type="text" name="name"><br>
-    Email: <input type="email" name="email"><br>
-    Password: <input type="password" name="password"><br>
-    
-<br>
-<input type="submit" value="Save Data">
-</form>
