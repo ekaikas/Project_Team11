@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li>
-                <a class="log" href="#">login</a><a class="log" href="#">register</a>
+                <a class="log" href="Login_Page.php">login</a><a class="log" href="#">register</a>
             </li>
         </ul>
     </section>
