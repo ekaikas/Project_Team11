@@ -69,13 +69,13 @@
             function setErrorFor(input, message) {
                 const formControl = input.parentElement;
                 const small = formControl.querySelector('small');
-                formControl.className = 'row error';
+                formControl.className = 'col-75 error';
                 small.innerText = message;
             }
 
             function setSuccessFor(input) {
                 const formControl = input.parentElement;
-                formControl.className = 'row success';
+                formControl.className = 'col-75 success';
             }
                 
             function isEmail(email) {

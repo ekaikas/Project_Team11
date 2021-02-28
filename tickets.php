@@ -22,64 +22,92 @@
             <!--Start of the tickets form-->
             <form id="form" class="form" name="ticket_form" action="insert_ticket.php" method="post">
             <div class="row">
-                <label for="cevent">Choose Event</label>
-                <select name="cevent" id="cevent">   
-                <option ceventValue="NULL" id="cevent">--select--</option>             
-                <option value="Full Moon Party">Full Moon Party</option>
-                <option value="The Summer Party">The Summer Party</option>
-                <option value="Pool Party">Pool Party</option>
-                </select> 
-                <i class="fa fa-check-circle" style="font-size:15px"></i>
-                <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
-                <small>Error message</small>
+                <div class="col-25">
+                <label for="cevent">Choose Event</label> 
+                </div>
+                <div class="col-75">
+                    <select name="cevent" id="cevent">   
+                    <option ceventValue="NULL" id="cevent">--select--</option>             
+                    <option value="Full Moon Party">Full Moon Party</option>
+                    <option value="The Summer Party">The Summer Party</option>
+                    <option value="Pool Party">Pool Party</option>
+                    </select> 
+                    <i class="fa fa-check-circle" style="font-size:15px"></i>
+                    <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                    <small>Error message</small>
+                </div>
             </div>
             <div class="row">
-                <label for="cardholder">Cardholder</label>
-                <input type="text" placeholder="Type the cardholder name" id="card_name"/>
-                <i class="fa fa-check-circle" style="font-size:15px"></i>
-                <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
-                <small>Error message</small>
+                    <div class="col-25">
+                    <label for="cardholder">Cardholder</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" placeholder="Type the cardholder name" id="card_name"/>
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
+                    </div>
             </div>
             <div class="row">
-                <label for="cnumber">Card Number</label>
-                <input type="number" placeholder="Type the card number" id="cnumber" />
-                <i class="fa fa-check-circle" style="font-size:15px"></i>
-                <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
-                <small>Error message</small>
+                    <div class="col-25">
+                    <label for="cnumber">Card Number</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" placeholder="Type the card number" id="cnumber" />
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
+                    </div>
             </div>
             <div class="row">
-                <label for="snumber">Sec Number</label>
-                <input type="number" placeholder="3 digits number on the back of the card" id="snumber" />
-                <i class="fa fa-check-circle" style="font-size:15px"></i>
-                <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
-                <small>Error message</small>
+                    <div class="col-25">
+                    <label for="snumber">Sec Number</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" placeholder="3 digits number on the back of the card" id="snumber" />
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
+                    </div>
             </div>
             <div class="row">
-                <label for="username">Email</label>
-                <input type="email" placeholder="Type your email" id="email" />
-                <i class="fa fa-check-circle" style="font-size:15px"></i>
-                <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
-                <small>Error message</small>
+                    <div class="col-25">
+                    <label for="username">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" placeholder="Type your email" id="email" />
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
+                    </div>
             </div>
             <div class="row">
-                <label for="t_amnt">Amount</label>
-                <input type="number" placeholder="Select number of tickets" id="t_amnt" />
-                <i class="fa fa-check-circle" style="font-size:15px"></i>
-                <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
-                <small>Error message</small>
+                    <div class="col-25">
+                    <label for="t_amnt">Amount</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" placeholder="Select number of tickets" id="t_amnt" />
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
+                    </div>
             </div>
             <div class="row">
-                <label for="bservice">Bottle Service</label>
-                <select name="bservice" id="bservice">   
-                <option bserviceValue="NULL" id="bservice">--none--</option>             
-                <option value="Girls Night Out">Girls Night Out</option>
-                <option value="Friday Feature">Friday Feature</option>
-                <option value="Rockstars">Rockstars</option>
-                <option value="The Baller">The Baller</option>
-                </select> 
-                <i class="fa fa-check-circle" style="font-size:15px"></i>
-                <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
-                <small>Error message</small>
+                    <div class="col-25">
+                    <label for="bservice">Bottle Service</label>
+                    </div>
+                    <div class="col-75">
+                        <select name="bservice" id="bservice">   
+                        <option bserviceValue="NULL" id="bservice">--none--</option>             
+                        <option value="Girls Night Out">Girls Night Out</option>
+                        <option value="Friday Feature">Friday Feature</option>
+                        <option value="Rockstars">Rockstars</option>
+                        <option value="The Baller">The Baller</option>
+                        </select> 
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
+                    </div>
             </div>    
                 <input class="form_btn" type="submit" value="Send">
             </form>
