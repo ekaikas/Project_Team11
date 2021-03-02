@@ -26,7 +26,7 @@
             <a href="index.php">Back to Main Page</a>
             <br>
             <br>
-            <input type="submit" value="Log In">
+            <input type="submit" name="submit" value="Log In">
         </form>
     </div>
 </body>
