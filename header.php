@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,13 +75,33 @@
                         <!--bottom row for login and register-->
                             <ul class="login">
                                 <li>
-                                    <a class="log" href="#">Sign In</a>
+                                    <?php
+                                        if(isset($_SESSION["id"]))
+                                        {
+                                            echo'<a class="log" href="user_profile.php">My Profile</a>';
+                                        }
+                                        else
+                                        {
+                                            echo'<a class="log" href="Login_Page.php">Log In</a>';
+
+                                        }
+                                    ?>
                                 </li>
                                 <li class="log">
                                     |
                                 </li>
                                 <li>
-                                    <a class="log" href="#">Register</a>
+                                    <?php
+                                        if(isset($_SESSION["id"]))
+                                        {
+                                            echo'<a class="log" href="logout.php">Log Out</a>';
+                                        }
+                                        else
+                                        {
+                                            echo'<a class="log" href="Reigistration_Page.php">Register</a>';
+
+                                        }
+                                    ?>
                                 </li>          
                             </ul>
                         </div>
