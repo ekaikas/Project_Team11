@@ -14,7 +14,7 @@
                 something special so we can come by and greet you after your personal shout-out from the host. Prices include taxes.
             </p>
             <p>
-                Reservations:
+                Reservations & Bookings: <br>
                 <button class="but" type="button">
                     <a class="links" href="tel:6468758000"> 
                         <img class="phone" src="Img/email/phone1.png" alt="phone logo vector white">

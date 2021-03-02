@@ -5,92 +5,110 @@
     include "header.php";
 ?> 
 
+<link rel="stylesheet" href="style_pages.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
 <h1>Tickets</h1> 
 <div class="container frm">  
     <div class="row">
         <div class="col formcss">
             <!--insert db file: insert_ticket.php-->
-            <form name="ticket_form" action="insert_ticket.php" method="post">
-                <div class="row">
+
+            <!--Start of the tickets form-->
+            <form id="form" class="form" name="ticket_form" action="insert_ticket.php" method="post">
+            <div class="row">
+                <div class="col-25">
+                <label for="cevent">Choose Event</label> 
+                </div>
+                <div class="col-75">
+                    <select name="cevent" id="cevent">   
+                    <option ceventValue="NULL" id="cevent">--select--</option>             
+                    <option value="Full Moon Party">Full Moon Party</option>
+                    <option value="The Summer Party">The Summer Party</option>
+                    <option value="Pool Party">Pool Party</option>
+                    </select> 
+                    <i class="fa fa-check-circle" style="font-size:15px"></i>
+                    <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                    <small>Error message</small>
+                </div>
+            </div>
+            <div class="row">
                     <div class="col-25">
-                        <label for="t_event">Choose Event</label>
+                    <label for="cardholder">Cardholder</label>
                     </div>
                     <div class="col-75">
-                        <!--t_event-->
-                        <select name="t_event">
-                            <option value="NULL">--select--</option>
-                            <option value="Full Moon Party">Full Moon Party</option>
-                            <option value="The Summer Party">The Summer Party</option>
-                            <option value="Pool Party">Pool Party</option>
-                        </select>
+                        <input type="text" placeholder="Type the cardholder name" id="card_name"/>
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
                     </div>
-                </div>
-                <hr>
-                <div class="row">
+            </div>
+            <div class="row">
                     <div class="col-25">
-                        <label for="t_name">Cardholder</label>
+                    <label for="cnumber">Card Number</label>
                     </div>
                     <div class="col-75">
-                        <!--t_name-->
-                        <input type="text" name="t_name" placeholder="Name on card..">
+                        <input type="number" placeholder="Type the card number" id="cnumber" />
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
                     </div>
-                </div>
-                <hr>
-                <div class="row">
+            </div>
+            <div class="row">
                     <div class="col-25">
-                        <label for="t_number">Card Number</label>
+                    <label for="snumber">Sec Number</label>
                     </div>
                     <div class="col-75">
-                        <!--t_number-->
-                        <input type="text" name="t_number" placeholder="Credit card number..">
+                        <input type="number" placeholder="3 digits number on the back of the card" id="snumber" />
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
                     </div>
-                </div>
-                <hr>
-                <div class="row">
+            </div>
+            <div class="row">
                     <div class="col-25">
-                        <label for="t_sec">Sec Number</label>
+                    <label for="username">Email</label>
                     </div>
                     <div class="col-75">
-                        <!--t_sec-->
-                        <input type="text" name="t_sec" placeholder="Number on back..">
+                        <input type="email" placeholder="Type your email" id="email" />
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
                     </div>
-                </div>
-                <hr>
-                <div class="row">
+            </div>
+            <div class="row">
                     <div class="col-25">
-                        <label for="t_email">Email</label>
+                    <label for="t_amnt">Amount</label>
                     </div>
                     <div class="col-75">
-                        <!--t_email-->
-                        <input type="email" name="t_email" placeholder="Your email..">
+                        <input type="number" placeholder="Select number of tickets" id="t_amnt" />
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
                     </div>
-                </div>
-                <hr>
-                <div class="row">
+            </div>
+            <div class="row">
                     <div class="col-25">
-                        <label for="t_amnt">Amount</label>
+                    <label for="bservice">Bottle Service</label>
                     </div>
                     <div class="col-75">
-                        <!--t_amnt-->
-                        <input type="number" name="t_amnt" placeholder="How many tickets..">
+                        <select name="bservice" id="bservice">   
+                        <option bserviceValue="NULL" id="bservice">--none--</option>             
+                        <option value="Girls Night Out">Girls Night Out</option>
+                        <option value="Friday Feature">Friday Feature</option>
+                        <option value="Rockstars">Rockstars</option>
+                        <option value="The Baller">The Baller</option>
+                        </select> 
+                        <i class="fa fa-check-circle" style="font-size:15px"></i>
+                        <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
+                        <small>Error message</small>
                     </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="t_btl">Bottle Service</label>
-                    </div>
-                    <div class="col-75">
-                        <!--t_btl-->
-                        <select name="t_btl">
-                            <option value="none">--none--</option>
-                            <option value="Girls Night Out">Girls Night Out</option>
-                            <option value="Friday Feature">Friday Feature</option>
-                            <option value="Rockstars">Rockstars</option>
-                            <option value="The Baller">The Baller</option>
-                        </select>                    
-                    </div>
-                </div>
+            </div>    
                 <input class="form_btn" type="submit" value="Send">
             </form>
         </div>
@@ -129,6 +147,9 @@
         </div>
     </div>
 </div>
+
+<!--Link to javascript form validation-->
+<script src="Tickets_Form validation and Event handling.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

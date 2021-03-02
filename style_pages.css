@@ -16,7 +16,9 @@ a {
 a:hover {
   color: snow;}
 
-/********  header  ********************/
+/********************************************************************/
+/*****************************  HEADER  *****************************/
+/********************************************************************/
 
 header {
     background: black;
@@ -45,10 +47,11 @@ li a {
 
 .header_logo {
   height: 88px;
-  margin: 12px 0 12px 102px;
-  padding: 5px 18px 0px 18px;
   width: auto;
-  text-align: c;
+}
+
+.logo_background {
+  text-align: center;
 }
 
 .sm {
@@ -58,7 +61,7 @@ li a {
   width: auto;;
 }
 
-/*****************  hamburger menu  *************************************/
+/************** Hamburger Menu (header) ***************/
 
 #menuToggle
 {
@@ -180,7 +183,9 @@ li a {
   transform: none;
 }
 
-/*****************  footer  *********************/
+/********************************************************************/
+/*****************************  FOOTER  *****************************/
+/********************************************************************/
 
 footer {
   background: black; 
@@ -240,12 +245,42 @@ h3 {
   border: 2px solid goldenrod;
 }
 
-/**********************  pages ***************/
+/*******************************************************************/
+/*****************************  PAGES  *****************************/
+/*******************************************************************/
 
+/****************** Images (pages) *******************/
 .dancing {
   height: auto;
   width: 550px;
   margin: 0px 0 36px 0;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.careerpic {
+  height: auto;
+  width: 550px;
+  margin: 20px 0 36px 0;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.eventpic {
+  width: 510px;
+  height: 550px;
+  margin-left: 39px;
+  box-shadow: 4px 4px rgb(44, 43, 43);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.contactpic {
+  height: auto;
+  width: 550px;
+  margin: 24px 0 36px 0;
   box-shadow: 4px 4px rgb(44, 43, 43);
   border-radius: 4px;
   resize: vertical;
@@ -282,7 +317,7 @@ h2 {
 
 h1 {
   text-align: center;
-  padding: 12px 68px 0px 0px;
+  padding-top: 1%;
   color: black;
   font-weight: 800;
 }
@@ -324,7 +359,7 @@ h1 {
   color: black;
 }
 
-/***************forms******************************/
+/****************** Forms (pages) *******************/
 
 form {
   background-color: rgb(36, 38, 68);
@@ -335,33 +370,6 @@ form {
   text-align: justify;
   text-justify: inter-word;
   border-radius: 8px;
-  resize: vertical;
-}
-
-.careerpic {
-  height: auto;
-  width: 550px;
-  margin: 20px 0 36px 0;
-  box-shadow: 4px 4px rgb(44, 43, 43);
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.eventpic {
-  width: 510px;
-  height: 550px;
-  margin-left: 39px;
-  box-shadow: 4px 4px rgb(44, 43, 43);
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.contactpic {
-  height: auto;
-  width: 550px;
-  margin: 24px 0 36px 0;
-  box-shadow: 4px 4px rgb(44, 43, 43);
-  border-radius: 4px;
   resize: vertical;
 }
 
@@ -410,17 +418,159 @@ form {
   margin-top: 6px;
 }
 
-/* Clear floats after the columns */
+/***** Clear floats after the columns *****/
 .frm .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+/***************form validations******************************/
+
+
+.col-75 {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+
+.col-75.success input {
+	border-color: #2ecc71;
+}
+
+.col-75.error input {
+	border-color: #e74c3c;
+}
+
+.col-75 i {
+	visibility: hidden;
+  color: #e74c3c;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+.col-75.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.col-75.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.col-75 small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.col-75.error small {
+	visibility: visible;
+}
+
+
+/*******************************************************************/
+/***********************  Responsive layout  ***********************/
+/*******************************************************************/
+
+/*when the screen is less than 600px wide*/
 @media screen and (max-width: 600px) {
+
+  /*make the two columns stack on top of each other*/
   .frm .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
+
+  form {
+    margin: 0;
+  }
+
+  .about {
+    margin: 0;
+  }
+
+  .terms_service {
+    max-width: 96%;
+  }
+
+  /**************** Images (Responsive) *****************/
+
+  img.dancing {
+    height: auto;
+    width: 20rem;
+    text-align: center;
+    margin-top: 8%;
+    padding: 0;
+  }
+
+  .eventpic {
+    height: 24em;
+    width: auto;
+    margin: 0;
+  }
+
+  .careerpic {
+    height: auto;
+    width: 20rem;
+    margin-top: 8%;
+    padding: 0;
+  }
+
+  img.contactpic {
+    height: auto;
+    width: 20rem;
+    margin-top: 8%;
+    padding: 0;
+  }
+
+  /*************** Header (Responsive) ****************/
+
+  ul.social {
+    position: absolute;
+    margin-left: -53%;
+    margin-top: -4.5%;
+  }
+
+  ul.login {
+    padding-right: 6%;
+  }
+
+  .logo_background {
+    margin-left: 50%;
+  }
+
+  .header_logo {
+    height: 5em;
+    width: auto;
+    padding: 0;
+  }
+
+  /**************** Footer (Responsive) *****************/
+
+  div.col.foot_right {
+    position:absolute;
+    margin-right: 0;
+  }
+
+  div.col.foot_left {
+    position:absolute;
+    margin-right: 0;
+  }
+
+  div.col.foot_center {
+    position: relative;
+    padding: 0;
+    margin-top: 50%;
+  }
+
+  img.footsie_logo {
+    margin: 0;
+    padding: 0;
+  }
+
 }

@@ -16,7 +16,7 @@
                 Guests must be 18 years or older. Reservations are recommended. 
             </p>
             <p>
-                Reservations:
+                Reservations or Tickets: <br>
                 <button class="but" type="button">
                     <a class="links" href="tel:6468758000"> 
                         <img class="phone" src="Img/email/phone1.png" alt="phone logo vector white">
