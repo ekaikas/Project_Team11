@@ -17,7 +17,7 @@
         <h1>Login Here</h1>
 
         <form name="form_login" method="post" action="" id="form" class="form">
-            <div id="message"></div>
+            <div class="message" id="message"></div>
             <br>
             <div class="form-control">
                 <label for="username">Username:</label>
@@ -29,29 +29,14 @@
                 <input type="password" name="password" placeholder="Enter your password" id="form_password"><br>
                 <small>Error message</small>
             </div>
-            <br>
+
             <a href="Registration_Page.php">Registration</a>
             <br>
             <a href="index.php">Back to Main Page</a>
             <br>
             <br>
-            <input type="button" name="submit" value="Log In" id="but_submit">
-
-
-        <form name="form_login" method="post" action="">
-            <div id="message"></div>
-            <br>
-            Username: <input type="text" name="username" id="form_username"><br>
-            Password: <input type="password" name="password" id="form_password">
-            <br>
-            <a href="Registration_Page.php">Registration</a>
-            <br>
-            <a href="index.php">Back to Main Page</a>
-            <br>
-            <br>
-            <input type="button" name="submit" value="Log In" id="but_submit">
+            <input type="submit" name="submit" value="Log In" id="but_submit">
         </form>
-
     </div>
 </body>
   
@@ -81,6 +66,10 @@
                         $("#message").html(msg);
                     }
                 });
+            }
+            else
+            {
+                $("#message").html('All fields are mandatory!');
             }
         });
 

@@ -15,26 +15,18 @@ $created_on = date('Y-m-d H:i:s'); //NOTE: server time (UTC) may be displayed
 $sql="insert into users (name, username, password, email, phone, created_on)
 values('$name', '$username', '$password', '$email', '$phone', '$created_on')"; # update to $password_hash
 
-
-if (empty($name && $username && $email && $password))
+if($conn->query($sql) === TRUE) 
 {
-    //echo'All fields are required!';
-    //echo "<a href='registration.php'> Return </a>";
+    //echo "New record added";
+    //echo "<a href='update.php' class='top'>Home </a>";
+    header("location: Login_Page.php");
+    echo 'password:'. $password_hash;
 }
 else
 {
-    if($conn->query($sql) === TRUE) 
-    {
-        //echo "New record added";
-        //echo "<a href='update.php' class='top'>Home </a>";
-        header("location: Login_Page.php");
-        echo 'password:'. $password_hash;
-    }
-    else
-    {
-        echo "ERROR: " .$sql. "<br>" . $conn->error;
-    }
+    echo "ERROR: " .$sql. "<br>" . $conn->error;
 }
+
 
 $conn->close();
 

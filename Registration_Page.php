@@ -49,7 +49,7 @@ include_once 'registration.php';
             </div>
             <div class="form-control">
                 <label for="username">Confirm password:</label>
-                <input type="password" name="password" placeholder="Confirm your password" id="password2"><br>
+                <input type="password" name="password2" placeholder="Confirm your password" id="password2"><br>
                 <small>Error message</small>
             </div>
                 <a href="Login_Page.php">Login</a>
