@@ -29,9 +29,9 @@ body{
 .loginbox
 {
    width: 320px;
-   height: 720px;
+   height: 710px;
    background: #000;
-   color: #fff;
+   color: rgb(255, 255, 255);
    top: 50%;
    left: 50%;
    position: absolute;
@@ -118,4 +118,31 @@ input:-webkit-autofill:active  {
     color: #ffc107
 }
 
+/***************form validations******************************/
 
+
+.form-control {
+	margin-bottom: 0px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.form-control.success input {
+	border-color: #1ecc2c;
+}
+
+.form-control.error input {
+	border-color: #e73c45;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
