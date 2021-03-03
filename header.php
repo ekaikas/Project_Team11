@@ -76,7 +76,7 @@
                             <ul class="login">
                                 <li>
                                     <?php
-                                        if(isset($_SESSION["id"]))
+                                        if(isset($_SESSION["username"]))
                                         {
                                             echo'<a class="log" href="user_profile.php">My Profile</a>';
                                         }
@@ -92,7 +92,7 @@
                                 </li>
                                 <li>
                                     <?php
-                                        if(isset($_SESSION["id"]))
+                                        if(isset($_SESSION["username"]))
                                         {
                                             echo'<a class="log" href="logout.php">Log Out</a>';
                                         }
