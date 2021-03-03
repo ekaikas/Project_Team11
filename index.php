@@ -40,7 +40,7 @@
         <?php
             // Start the session
             session_start();
-            if(isset($_SESSION["id"]) === true)
+            if(isset($_SESSION["username"]) === true)
             {
                 echo'
                 <ul class="social">

@@ -27,7 +27,7 @@ else
     {
         //echo "New record added";
         //echo "<a href='update.php' class='top'>Home </a>";
-        //header("location: Login_Page.php");
+        header("location: Login_Page.php");
         echo 'password:'. $password_hash;
     }
     else

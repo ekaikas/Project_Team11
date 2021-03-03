@@ -3,7 +3,7 @@ require_once 'read_profile.php';
 include 'user_update.php';
 
 // Redirect user, if user is manually trying to access location when not logged in.
-if(isset($_SESSION["id"]) === false)
+if(isset($_SESSION["username"]) === false)
 {
     header("location: index.php");
 }
