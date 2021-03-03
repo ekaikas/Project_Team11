@@ -15,7 +15,10 @@
     <div class="loginbox">
         <img src="img/avatar.png" alt="avatar image" class="avatar">
         <h1>Login Here</h1>
+
         <form name="form_login" method="post" action="" id="form" class="form">
+            <div id="message"></div>
+            <br>
             <div class="form-control">
                 <label for="username">Username:</label>
                 <input type="text" name="username" placeholder="Enter your username" id="form_username"><br>
@@ -25,8 +28,16 @@
                 <label for="username">Password:</label>
                 <input type="password" name="password" placeholder="Enter your password" id="form_password"><br>
                 <small>Error message</small>
-            </div>            <br>
-<!--
+            </div>
+            <br>
+            <a href="Registration_Page.php">Registration</a>
+            <br>
+            <a href="index.php">Back to Main Page</a>
+            <br>
+            <br>
+            <input type="button" name="submit" value="Log In" id="but_submit">
+
+
         <form name="form_login" method="post" action="">
             <div id="message"></div>
             <br>
@@ -40,11 +51,11 @@
             <br>
             <input type="button" name="submit" value="Log In" id="but_submit">
         </form>
--->
+
     </div>
 </body>
   
-
+<script src="Login_FormValidation_EventHandling.js"></script>
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
