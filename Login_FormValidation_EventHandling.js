@@ -1,33 +1,39 @@
 const form = document.getElementById('form');
-const form_username = document.getElementById('form_username');
-const form_password = document.getElementById('form_password');
+const username = document.getElementById('username');
+const password = document.getElementById('password');
 
-// trim to remove the whitespaces
-const usernameValue = form_username.value.trim();
-const passwordValue = form_password.value.trim();
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
 
 	validateUsername();
-	validatePassword();
+	validatePass();
 });
 
 // FUNCTIONS: Validation
 function validateUsername() {
-	if (usernameValue.length < 5) {
-		setErrorFor(form_username, 'Username cannot be blank');
+	const usernameValue = username.value.trim();
+	if (usernameValue === '') {
+		setErrorFor(username, 'Username cannot be blank');
+	}
+	else if (usernameValue.length < 5) {
+		setErrorFor(username, 'Less than 5 character long');
 	}
 	else {
-		setSuccessFor(form_username);
+		setSuccessFor(username, 'Seems OK');
 	}
 }
-function validatePassword() {
+function validatePass() {
+	const passwordValue = password.value.trim();
+
 	if (passwordValue === '') {
-		setErrorFor(form_password, 'Password cannot be blank');
+		setErrorFor(password, 'Password cannot be blank');
+	}
+	else if (passwordValue.length < 8) {
+		setErrorFor(password, 'A bit longer...');
 	}
 	else {
-		setSuccessFor(form_password);
+		setSuccessFor(password, 'Seems OK');
 	}
 }
 

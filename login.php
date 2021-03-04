@@ -1,3 +1,8 @@
+<?php
+// Logged in user cannot reach this page.
+include 'user_session.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,18 +21,18 @@
         <img src="img/avatar.png" alt="avatar image" class="avatar">
         <h1>Login Here</h1>
 
-        <form name="form_login" method="post" action="" id="form" class="form">
+        <form name="login" method="post" action="" id="form" class="form">
             <div class="message" id="message"></div>
             <br>
             <div class="form-control">
                 <label for="username">Username:</label>
-                <input type="text" name="username" placeholder="Enter your username" id="form_username"><br>
-                <small>Error message</small>
+                <input type="text" name="username" placeholder="Enter your username" id="username"><br>
+                <small>Minimum 5 letters.</small>
             </div>
             <div class="form-control">
                 <label for="username">Password:</label>
-                <input type="password" name="password" placeholder="Enter your password" id="form_password"><br>
-                <small>Error message</small>
+                <input type="password" name="password" placeholder="Enter your password" id="password"><br>
+                <small>Between 6-20 characters</small>
             </div>
             <a href="registration.php">Registration</a>
             <br>
@@ -44,5 +49,5 @@
 <!-- Javascript -->
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="Login_FormValidation_EventHandling.js"></script>
+<script src="Login_FormValidation_EventHandling2.js"></script>
 <script src="user_login.js"> </script>

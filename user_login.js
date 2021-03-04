@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    $("#message").html('Welcome!');
+
     $("#but_submit").click(function () {
         var username = $("#form_username").val().trim();
         var password = $("#form_password").val().trim();
 
-        if (username.length >= 5 && password.length > 0) {
+        if (username != "" && password != "") {
             $.ajax({
                 url: 'user_login.php',
                 type: 'post',
@@ -12,7 +12,6 @@ $(document).ready(function () {
                 success: function (response) {
                     var msg = "";
                     if (response == 1) {
-                        msg = "Successful log in!"
                         window.location = "index.php";
                     } else {
                         msg = "Invalid username and password!";
@@ -25,4 +24,5 @@ $(document).ready(function () {
             $("#message").html('All fields are mandatory!');
         }
     });
+
 });

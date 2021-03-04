@@ -9,7 +9,7 @@ if(isset($_SESSION["username"]) === true)
     // pop up message?
     echo 'You are already logged in.';
     echo '<br>';
-    echo '<a href="logout.php" class="top">Logout </a>';
+    echo '<a href="user_logout.php" class="top">Logout </a>';
     exit;
 }
 

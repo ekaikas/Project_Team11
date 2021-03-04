@@ -1,27 +1,34 @@
+// Getters:
 const form = document.getElementById('form');
 const username = document.getElementById('username');
-const Name = document.getElementById('Name');
+const Name = document.getElementById('name');
 const email = document.getElementById('email');
 const phone = document.getElementById('phone');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
+// Form values:
+const usernameValue = username.value.trim(); // Trim to remove the whitespaces
+const NameValue = Name.value.trim();
+const emailValue = email.value.trim();
+const phoneValue = phone.value.trim();
+const passwordValue = password.value.trim();
+const password2Value = password2.value.trim();
+
+// Event Listener:
 form.addEventListener('submit', e => {
 	e.preventDefault();
 
-	checkInputs();
+	validateUsername();
+	validateName();
+	validateEmail();
+	validatePhone();
+	validatePassword();
+	validatePassword2();
 });
+//FUNCTIONS Validators:
 
-function checkInputs() {
-	// Trim to remove the whitespaces
-	const usernameValue = username.value.trim();
-	const NameValue = Name.value.trim();
-	const emailValue = email.value.trim();
-	const phoneValue = phone.value.trim();
-	const passwordValue = password.value.trim();
-	const password2Value = password2.value.trim();
-
-	// Validate username
+function validateUsername() {
 	if (usernameValue === '') {
 		setErrorFor(username, 'Username cannot be blank');
 	}
@@ -31,7 +38,9 @@ function checkInputs() {
 	else {
 		setSuccessFor(username, 'Valid format');
 	}
-	// Validate full name
+}
+
+function validateName() {
 	if (NameValue === '') {
 		setErrorFor(Name, 'Name cannot be blank');
 	}
@@ -41,7 +50,9 @@ function checkInputs() {
 	else {
 		setSuccessFor(Name, 'Valid format');
 	}
-	// Validate email
+}
+
+function validateEmail() {
 	if (emailValue === '') {
 		setErrorFor(email, 'Email cannot be blank');
 	}
@@ -54,7 +65,9 @@ function checkInputs() {
 	else {
 		setSuccessFor(email, 'Valid format');
 	}
-	// Validate phone
+}
+
+function validatePhone() {
 	if (phoneValue === '') {
 		setErrorFor(phone, 'Phone cannot be blank');
 	}
@@ -64,7 +77,9 @@ function checkInputs() {
 	else {
 		setSuccessFor(phone, 'Valid phonenumber');
 	}
-	// Validate password
+
+}
+function validatePassword() {
 	if (passwordValue === '') {
 		setErrorFor(password, 'Password cannot be blank');
 	}
@@ -77,7 +92,10 @@ function checkInputs() {
 	else {
 		setSuccessFor(password, 'Matching password');
 	}
-	// Validate confirmation password
+
+}
+
+function validatePassword2() {
 	if (password2Value === '') {
 		setErrorFor(password2, 'Confirmation Password cannot be blank');
 	}
@@ -91,7 +109,7 @@ function checkInputs() {
 	}
 }
 
-// FUNCTIONS: Messages
+// FUNCTIONS Messages:
 function setErrorFor(input, message) {
 	const formControl = input.parentElement;
 	const small = formControl.querySelector('small');
@@ -106,7 +124,7 @@ function setSuccessFor(input, message) {
 	small.innerText = message;
 }
 
-// FUNCTIONS: Testers
+// FUNCTIONS Testers:
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
