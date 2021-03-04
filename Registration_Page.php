@@ -6,18 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" type="text/css" href="Reg_style.css">
+    <link rel="stylesheet" type="text/css" href="style_user.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body class="page-bckgrnd-reg">
 <div class="container">   
     <div class="loginbox scroll">
         <img src="img/avatar2.png" alt="avatar image" class="avatar">
         <h1>Create Account</h1>
-        
-        <form name= "registration" method="post" action="" id="form" class="form">
+        <form name= "registration_form" method="post" action="" id="reg_form" class="form">
             <div class="message" id="message"></div>
             <br>
             <div class="form-control">
@@ -61,64 +60,8 @@
                 <input type="submit" name="submit" value="Register" id="but_submit">
         </form>
     </div>
-</div>
-    
+</div>  
 </body>
-
-
-<!--
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("#message").html('Please fill in the form.');
-
-        $("#but_submit").click(function(){
-            var username = $("#username").val().trim();
-            var name = $("#Name").val().trim();
-            var email = $("#email").val().trim();
-            var phone = $("#phone").val().trim();
-            var password = $("#password").val().trim();
-
-            if( username != "" && name != "" && email != "" && phone !="" && password != ""){
-                $.ajax({
-                    url:'registration.php',
-                    type:'post',
-                    data:{username:username, name:name, email:email, phone:phone, password:password},
-                    success:function(response){
-                        var msg = "";
-                        if(response == 1)
-                        {
-                            window.location = "Login_Page.php";
-                        }
-                        else if(response == 100)
-                        {
-                            msg = "Username already in use.";
-                        }
-                        else if(response == 101)
-                        {
-                            msg = "Email address already in use";
-                        }
-                        else if(response == 102)
-                        {
-                            msg = "Username and email not available.";
-                        }
-                        else
-                        {
-                            msg = "There was an internal error. Try again.";
-                        }
-                        $("#message").html(msg);
-                    }
-                });
-            }
-            else
-            {   
-                $("#message").html('Please check your entries!');
-            }
-        });
-
-    });
-
-</script>
--->
 </html>
 
 <!-- ******************************************************************* JAVASCRIPT *******************************************************************-->
@@ -126,4 +69,4 @@
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Has to be the last in load order!-->
-<script src="Registration_FormValidation_EventHandling.js"></script> 
+<script src="Registration_FormValidation_EventHandling.js"></script>
