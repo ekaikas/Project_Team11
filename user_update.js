@@ -63,7 +63,7 @@ $(document).ready(function () {
 
         if (validUser && validName && validEmail && validPhone && validPass1 && validPass2) {
             $.ajax({
-                url: 'user_update.php',
+                url: 'user_update_seq.php',
                 type: 'post',
                 data: { username: username, name: name, email: email, phone: phone, password: password },
                 success: function (response) {

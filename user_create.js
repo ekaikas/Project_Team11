@@ -1,4 +1,3 @@
-
 // jQuery
 $(document).ready(function () {
 
@@ -63,13 +62,13 @@ $(document).ready(function () {
 
         if (validUser && validName && validEmail && validPhone && validPass1 && validPass2) {
             $.ajax({
-                url: 'registration.php',
+                url: 'user_create_seq.php',
                 type: 'post',
                 data: { username: username, name: name, email: email, phone: phone, password: password },
                 success: function (response) {
                     var msg = "";
                     if (response == 1) {
-                        window.location = "Login_Page.php";
+                        window.location = "login.php";
                     }
                     else if (response == 100) {
                         msg = "Username already in use.";

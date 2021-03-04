@@ -1,10 +1,10 @@
 <?php
 $servername="localhost:3307";
-$username="root";
+$db_username="root";
 $password="root";
-$dbname ="forum_db";
+$db_name ="forum_db";
 // creating connection 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $db_username, $password, $db_name);
 
 // Check connection
 if ($conn->connect_error) 

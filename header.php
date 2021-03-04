@@ -78,11 +78,11 @@
                                     <?php
                                         if(isset($_SESSION["username"]))
                                         {
-                                            echo'<a class="log" href="user_profile.php">My Profile</a>';
+                                            echo'<a class="log" href="profile.php">My Profile</a>';
                                         }
                                         else
                                         {
-                                            echo'<a class="log" href="Login_Page.php">Log In</a>';
+                                            echo'<a class="log" href="login.php">Log In</a>';
 
                                         }
                                     ?>
@@ -94,11 +94,11 @@
                                     <?php
                                         if(isset($_SESSION["username"]))
                                         {
-                                            echo'<a class="log" href="logout.php">Log Out</a>';
+                                            echo'<a class="log" href="user_logout.php">Log Out</a>';
                                         }
                                         else
                                         {
-                                            echo'<a class="log" href="Reigistration_Page.php">Register</a>';
+                                            echo'<a class="log" href="registration.php">Register</a>';
 
                                         }
                                     ?>

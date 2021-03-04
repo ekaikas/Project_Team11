@@ -1,96 +1,48 @@
-<?php
-require_once 'db.php';
-require_once 'session.php';
+<!DOCTYPE html>
+<html lang="en">
 
-$uname = $_POST['username'];
-$password_vis = $_POST['password'];
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="Log_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-// Get the password hash from the database:
-if ($uname != "" && $password_vis != "")
-{
-    $sql = "SELECT password FROM users WHERE username='$uname'"; 
-    $result = mysqli_query($conn,$sql);
-    if($result ->num_rows > 0) 
-    {
-        $row = mysqli_fetch_array($result);
-        $password_hash = $row['password'];
+<body>
+    <div class="loginbox">
+        <img src="img/avatar.png" alt="avatar image" class="avatar">
+        <h1>Login Here</h1>
 
-        // Verify password/hash
-        if(password_verify($password_vis, $password_hash))
-        {
-            $_SESSION['username'] = $uname; //username has been validated already.
-            echo 1;
-        }    
-        else
-        {
-            echo 0;
-        }
-    }   
-}
+        <form name="form_login" method="post" action="" id="form" class="form">
+            <div class="message" id="message"></div>
+            <br>
+            <div class="form-control">
+                <label for="username">Username:</label>
+                <input type="text" name="username" placeholder="Enter your username" id="form_username"><br>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Password:</label>
+                <input type="password" name="password" placeholder="Enter your password" id="form_password"><br>
+                <small>Error message</small>
+            </div>
+            <a href="registration.php">Registration</a>
+            <br>
+            <a href="index.php">Back to Main Page</a>
+            <br>
+            <br>
+            <input type="submit" name="submit" value="Log In" id="but_submit">
+        </form>
+    </div>
+</body>
+</html>
 
 
-/*
-function test()
-{   
-    $test = 'test';
-    return $test;
-}
-
-function saveMeassage($variable)
-{
-    $_SESSION['error'] = $message;
-    return $_SESSION['error'];
-}
-
-unset($message);
-$email = trim($_POST['email']);
-$password = trim($_POST['password']);
-
-// ************** LOGIN PROCESS STARTS HERE **************
-$sql_hash = "select password from users where email = '$email'"; // SQL query to check if hash/password is ok
-$res_hash = $conn->query($sql_hash);
-if($res_hash ->num_rows > 0) 
-{
-    $row_hash = $res_hash ->fetch_assoc();
-    $hash = $row_hash['password']; // Selecting encrypted password (hash)
-    if(password_verify($password, $hash)) //Comparing typed pw with db pw (hash)
-    {
-        $sql_userdata = "select id, username from users where email = '$email' and password = '$hash'"; // SQL query to select user specific details
-        $result = $conn->query($sql_userdata);
-        if($result ->num_rows > 0) 
-        {
-            $row = $result ->fetch_assoc(); // User specific details are stored in a GLOBAL VARIABLE/ARRAY called $_SESSION[], that may be accessed on other pages only if user is logged in.
-            $_SESSION["id"] = $row['id']; //Will be used to confirm successful login
-            $_SESSION["username"] = $row['username']; //Will be displayed on main page
-            $message="Successful log in!";
-            header('location: index.php');
-            die;
- 
-        }
-        else 
-        {
-            //do something: error
-            //echo '<script>alert("Something went wrong. Please try it later.")</script>'; 
-            $message="Something went wrong. Please try it later.";
-            saveMeassage($message);
-        }
-    }
-    else
-    {
-        //do something: error
-        //echo '<script>alert("Password is incorrect. Try again.")</script>';
-        $message="Password is incorrect. Try again.";
-        saveMeassage($message);
-    }
-}
-else 
-{
-    //do something: error
-    //echo '<script>alert("Email is incorrect.")</script>';
-    $message="Email is incorrect.";
-    saveMeassage($message);
-}
-$conn->close();
-
-*/
-?>
+<!-- Javascript -->
+<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="Login_FormValidation_EventHandling.js"></script>
+<script src="user_login.js"> </script>

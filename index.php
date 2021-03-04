@@ -60,7 +60,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="log" href="user_profile.php">Hi, '.$_SESSION["username"].'</a><a class="log" href="logout.php">logout</a>
+                        <a class="log" href="profile.php">Hi, '.$_SESSION["username"].'</a><a class="log" href="user_logout.php">logout</a>
                     </li>
                 </ul>';
             }
@@ -84,7 +84,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="log" href="Registration_Page.php">register</a><a class="log" href="Login_Page.php">login</a>
+                        <a class="log" href="registration.php">register</a><a class="log" href="login.php">login</a>
                     </li>
                 </ul>';
             }

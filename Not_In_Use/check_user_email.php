@@ -30,5 +30,4 @@ else
 {
     $isemail_avbl = true; //email is not taken
 }
-
 ?>

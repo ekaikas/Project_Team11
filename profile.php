@@ -9,6 +9,14 @@ if(isset($_SESSION["username"]) === false)
 {
     header("location: index.php");
 }
+// for Debugging purpose:
+echo $name;
+echo $username;
+echo $email;
+echo $phone;
+echo $password_vis;
+echo $password_hash;
+echo $created_on; //NOTE: server time (UTC) may be displayed
 ?>
 
 <!DOCTYPE html>
@@ -76,5 +84,5 @@ if(isset($_SESSION["username"]) === false)
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Has to be the last in load order!-->
-<script src="reg_edit_validation.js"></script>
-<script src="reg_update.js"></script>
+<script src="user_validation.js"></script>
+<script src="user_update.js"></script>
