@@ -13,14 +13,6 @@ form.addEventListener('submit', e => {
 });
 
 function checkInputs() {
-	// Booleans for DB connection
-	const validUser = false;
-	const validName = false;
-	const validEmail = false;
-	const validPhone = false;
-	const validPass1 = false;
-	const validPass2 = false;
-
 	// Trim to remove the whitespaces
 	const usernameValue = username.value.trim();
 	const NameValue = Name.value.trim();
@@ -31,101 +23,138 @@ function checkInputs() {
 
 	// Validate username
 	if (usernameValue === '') {
-		validUser = false;
 		setErrorFor(username, 'Username cannot be blank');
 	}
 	else if (usernameValue.length < 5) {
-		validUser = false;
 		setErrorFor(username, 'Less than 5 character long');
 	}
 	else {
-		validUser = true;
 		setSuccessFor(username, 'Valid format');
 	}
 	// Validate full name
 	if (NameValue === '') {
-		validName = false;
 		setErrorFor(Name, 'Name cannot be blank');
 	}
 	else if (NameValue.lentgth > 50) {
-		validName = false;
 		setErrorFor(Name, 'Name is too long');
 	}
 	else {
-		validName = true;
 		setSuccessFor(Name, 'Valid format');
 	}
 	// Validate email
 	if (emailValue === '') {
-		validEmail = false;
 		setErrorFor(email, 'Email cannot be blank');
 	}
 	else if (!isEmail(emailValue)) {
-		validEmail = false;
 		setErrorFor(email, 'Not a valid email');
 	}
 	else if (emailValue.length > 50) {
-		validEmail = false;
 		setErrorFor(email, 'Email is too long');
 	}
 	else {
-		validEmail = true;
 		setSuccessFor(email, 'Valid format');
 	}
 	// Validate phone
 	if (phoneValue === '') {
-		validPhone = false;
 		setErrorFor(phone, 'Phone cannot be blank');
 	}
 	else if (!isPhonenumber(String(phoneValue))) {
-		validPhone = false;
 		setErrorFor(phone, 'Accepted format: +00 0000 0000');
 	}
 	else {
-		validPhone = true;
 		setSuccessFor(phone, 'Valid phonenumber');
 	}
 	// Validate password
 	if (passwordValue === '') {
-		validPass1 = false;
 		setErrorFor(password, 'Password cannot be blank');
 	}
 	else if (passwordValue !== password2Value) {
-		validPass1 = false;
 		setErrorFor(password, 'Passwords does not match');
 	}
+	else if (!isPassword(passwordValue)) {
+		setErrorFor(password, 'Strong password required');
+	}
 	else {
-		validPass1 = true;
 		setSuccessFor(password, 'Matching password');
 	}
 	// Validate confirmation password
 	if (password2Value === '') {
-		validPass2 = false;
 		setErrorFor(password2, 'Confirmation Password cannot be blank');
-	} else if (password2Value !== passwordValue) {
-		validPass2 = false;
+	}
+	else if (password2Value !== passwordValue) {
 		setErrorFor(password2, 'Passwords does not match');
+	}
+	else if (!isPassword(password2Value)) {
+		setErrorFor(password2, 'Strong password required');
 	} else {
-		validPass2 = true;
 		setSuccessFor(password2, 'Matching password');
 	}
 }
+
 
 // jQuery
 $(document).ready(function () {
 
 	$("#message").html('Please fill in the form.');
 	$("#but_submit").click(function () {
+		var validUser = false;
+		var validName = false;
+		var validEmail = false;
+		var validPhone = false;
+		var validPass1 = false;
+		var validPass2 = false;
 
 		var username = $("#username").val().trim();
 		var name = $("#Name").val().trim();
 		var email = $("#email").val().trim();
 		var phone = $("#phone").val().trim();
 		var password = $("#password").val().trim();
+		var password2 = $("#password2").val().trim();
 
+		// Validate username
+		if (username == '' || username.length < 5) {
+			validUser = false;
+		}
+		else {
+			validUser = true;
+		}
+		// Validate full name
+		if (name == '' || name.lentgth > 50) {
+			validName = false;
+		}
+		else {
+			validName = true;
+		}
+		// Validate email
+		if (email == '' || email.length > 50 || !email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+			validEmail = false;
+		}
+		else {
+			validEmail = true;
+		}
+		// Validate phone
+		if (phone == '' || !phone.match(/^\+?([0-9]{2})\)?[ ]?([0-9]{4})[ ]?([0-9]{4})$/)) {
+			validPhone = false;
+		}
+		else {
+			validPhone = true;
+		}
+		// Validate password
+		if (password == '' || password != password2 || !password.match(/^.*(?=.{15,})(?=.{2,}\d)(?=.{2,}[a-z])(?=.{2,}[A-Z])(?=.{2,}[\!\@\#\$\%\^\&\*\-]).*$/)) {
+			validPass1 = false;
+		}
+		else {
+			validPass1 = true;
+		}
+		// Validate confirmation password
+		if (password2 == '' || password2 != password || !password.match(/^.*(?=.{15,})(?=.{2,}\d)(?=.{2,}[a-z])(?=.{2,}[A-Z])(?=.{2,}[\!\@\#\$\%\^\&\*\-]).*$/)) {
+			validPass2 = false;
+		}
+		else {
+			validPass2 = true;
+		}
 
-
-		if (username != "" && name != "" && email != "" && phone != "" && password != "") {
+		if (validUser && validName && validEmail && validPhone && validPass1 && validPass2) {
 			$.ajax({
 				url: 'registration.php',
 				type: 'post',
@@ -152,7 +181,7 @@ $(document).ready(function () {
 			});
 		}
 		else {
-			$("#message").html('Please check your entries!');
+			$("#message").html('Validation failed!');
 		}
 	});
 
@@ -178,4 +207,14 @@ function isEmail(email) {
 }
 function isPhonenumber(phone) {
 	return /^\+?([0-9]{2})\)?[ ]?([0-9]{4})[ ]?([0-9]{4})$/.test(phone);
+}
+function isPassword(password) {
+	return /^.*(?=.{15,})(?=.{2,}\d)(?=.{2,}[a-z])(?=.{2,}[A-Z])(?=.{2,}[\!\@\#\$\%\^\&\*\-]).*$/.test(password)
+	/*
+		At least 15 characters
+		two or more lower case letters
+		two or more upper case letters
+		two or more digits
+		two or more of the following special characters: !@#$%^&*-
+	*/
 }

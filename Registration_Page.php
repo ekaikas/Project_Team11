@@ -32,7 +32,7 @@
             </div>
             <div class="form-control">
                 <label for="email">Email*</label>
-                <input type="email" name="email" placeholder="Enter your email" id="email"><br>
+                <input type="text" name="email" placeholder="Enter your email" id="email"><br>
                 <small>Existing email address</small>
             </div>
             <div class="form-control">
@@ -50,9 +50,12 @@
                 <input type="password" name="password2" placeholder="Confirm your password" id="password2"><br>
                 <small>Strong password</small>
             </div>
-                <a href="Login_Page.php">Login</a>
+            
+                <a href="https://passwordsgenerator.net/">Password generator</a>
                 <br>
-                <a href="index.php">Back to Main Page</a>
+                <a href="index.php">Back to main page</a>
+                <br>
+                <a href="Login_Page.php">Login</a>
                 <br>
                 <br>
                 <input type="submit" name="submit" value="Register" id="but_submit">
