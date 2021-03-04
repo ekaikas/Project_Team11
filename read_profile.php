@@ -13,12 +13,11 @@ if($result ->num_rows > 0)
         $_SESSION['name'] = $row['name'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['phone'] = $row['phone'];
-        //$_SESSION['hash'] = $row['password'];
     }    
 }
 else 
 {
-    //do something
+    $conn->error;
 }
 $conn->close();
 ?>

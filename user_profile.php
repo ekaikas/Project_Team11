@@ -1,14 +1,16 @@
-<?php 
-require_once 'read_profile.php';
-//include 'user_update.php';
+<?php
+// Makes $_SESSION[] available
+session_start();
+// Read user data from DB
+include 'read_profile.php';
 
 // Redirect user, if user is manually trying to access location when not logged in.
 if(isset($_SESSION["username"]) === false)
 {
     header("location: index.php");
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,4 +76,5 @@ if(isset($_SESSION["username"]) === false)
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Has to be the last in load order!-->
-<script src="reg_edit_validation.js"></script> 
+<script src="reg_edit_validation.js"></script>
+<script src="reg_update.js"></script>

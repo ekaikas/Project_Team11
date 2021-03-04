@@ -16,7 +16,7 @@
     <div class="loginbox scroll">
         <img src="img/avatar2.png" alt="avatar image" class="avatar">
         <h1>Create Account</h1>
-        <form name= "registration_form" method="post" action="" id="reg_form" class="form">
+        <form name= "registration_form" method="post" action="" id="form" class="form">
             <div class="message" id="message"></div>
             <br>
             <div class="form-control">
@@ -69,4 +69,5 @@
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Has to be the last in load order!-->
-<script src="Registration_FormValidation_EventHandling.js"></script>
+<script src="reg_edit_validation.js"></script>
+<script src="reg_create.js"></script>
