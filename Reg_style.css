@@ -29,7 +29,7 @@ body{
 .loginbox
 {
    width: 320px;
-   height: 710px;
+   height: 820px;
    background: #000;
    color: rgb(255, 255, 255);
    top: 50%;
@@ -119,8 +119,10 @@ input:-webkit-autofill:active  {
 }
 
 /***************form validations******************************/
-
-
+.message {
+text-align: center;
+color: #ffc107;
+}
 .form-control {
 	margin-bottom: 0px;
 	padding-bottom: 10px;
@@ -134,15 +136,19 @@ input:-webkit-autofill:active  {
 .form-control.error input {
 	border-color: #e73c45;
 }
-
 .form-control small {
-	color: #e74c3c;
-	position: absolute;
+    color: #ffc107;
+    position: absolute;
 	bottom: 10px;
 	left: 0;
-	visibility: hidden;
+	visibility: visible;
+}
+.form-control.success small {
+	color: #1ecc2c;
+	visibility: visible;
 }
 
 .form-control.error small {
+	color: #e74c3c;
 	visibility: visible;
 }
