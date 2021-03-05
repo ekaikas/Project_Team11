@@ -1,11 +1,11 @@
 // GETTERS
 var form = document.getElementById('form');
-var username = document.getElementById("username")
-var password = document.getElementById("password")
+var username = document.getElementById("username");
+var password = document.getElementById("password");
 
 // EVENT LISTENERS
 username.addEventListener("input", validateUsername);
-password.addEventListener("input", validatePass)
+password.addEventListener("input", validatePass);
 
 // FUNCTIONS: Validation
 function validateUsername() {

@@ -49,5 +49,5 @@ include 'user_session.php';
 <!-- Javascript -->
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="Login_FormValidation_EventHandling2.js"></script>
+<script src="login_validation.js"></script>
 <script src="user_login.js"> </script>

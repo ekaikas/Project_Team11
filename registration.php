@@ -16,7 +16,7 @@
     <div class="loginbox scroll">
         <img src="img/avatar2.png" alt="avatar image" class="avatar">
         <h1>Create Account</h1>
-        <form name= "registration_form" method="post" action="" id="form" class="form">
+        <form name= "registration" method="post" action="" id="form" class="form">
             <div class="message" id="message"></div>
             <br>
             <div class="form-control">
@@ -26,7 +26,7 @@
             </div>
             <div class="form-control">
                 <label for="name">Name*</label>
-                <input type="text" name="name" placeholder="Enter your full name" id="Name"><br>
+                <input type="text" name="name" placeholder="Enter your full name" id="fullname"><br>
                 <small>Your full name</small>
             </div>
             <div class="form-control">

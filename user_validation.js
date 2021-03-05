@@ -1,34 +1,63 @@
-// Getters:
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const Name = document.getElementById('name');
-const email = document.getElementById('email');
-const phone = document.getElementById('phone');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
 
-// Form values:
-const usernameValue = username.value.trim(); // Trim to remove the whitespaces
-const NameValue = Name.value.trim();
-const emailValue = email.value.trim();
-const phoneValue = phone.value.trim();
-const passwordValue = password.value.trim();
-const password2Value = password2.value.trim();
+// GETTERS
+var form = document.getElementById('form');
+var username = document.getElementById("username")
+var fullname = document.getElementById('fullname');
+var email = document.getElementById('email');
+var phone = document.getElementById('phone');
+var password = document.getElementById("password");
+var password2 = document.getElementById('password2');
 
-// Event Listener:
+// EVENT LISTENERS
+/*
 form.addEventListener('submit', e => {
 	e.preventDefault();
 
-	validateUsername();
-	validateName();
-	validateEmail();
-	validatePhone();
-	validatePassword();
-	validatePassword2();
 });
-//FUNCTIONS Validators:
 
+form.addEventListener('submit', e => {
+	e.preventDefault();
+
+	validateForm();
+	//alert('eae');
+});
+
+form.addEventListener("submit", function (event) {
+	event.preventDefault() // Will cancel submit if validation is not successful
+});
+*/
+username.addEventListener("input", validateUsername);
+email.addEventListener("input", validateEmail);
+phone.addEventListener("input", validatePhone);
+password.addEventListener("input", validatePass);
+password2.addEventListener("input", validatePass2);
+fullname.addEventListener("input", validateName);
+//form.addEventListener("submit", validateForm);
+
+var valCounter = 0;
+
+var usernameValue;
+var nameValue;
+var emailValue;
+var phoneValue;
+var passwordValue;
+var password2Value;
+
+form.addEventListener('submit', e => {
+	e.preventDefault();
+
+	e.validateUsername();
+	e.validateName();
+	e.validateEmail();
+	e.validatePhone();
+	e.validatePass();
+	e.validatePass2();
+});
+
+//FUNCTIONS Validators:
 function validateUsername() {
+	valCounter = 0;
+	usernameValue = username.value.trim();
 	if (usernameValue === '') {
 		setErrorFor(username, 'Username cannot be blank');
 	}
@@ -37,22 +66,32 @@ function validateUsername() {
 	}
 	else {
 		setSuccessFor(username, 'Valid format');
+		valCounter++;
 	}
 }
 
 function validateName() {
-	if (NameValue === '') {
-		setErrorFor(Name, 'Name cannot be blank');
+	valCounter = 0;
+	nameValue = fullname.value.trim();
+	if (nameValue.length = 0) {
+		setErrorFor(fullname, 'Name cannot be blank');
 	}
-	else if (NameValue.lentgth > 50) {
-		setErrorFor(Name, 'Name is too long');
+	else if (nameValue.length <= 5) {
+		setErrorFor(fullname, 'At least 5 characters');
+	}
+	else if (nameValue.length >= 50) {
+		setErrorFor(fullname, 'Name is too long');
 	}
 	else {
-		setSuccessFor(Name, 'Valid format');
+		setSuccessFor(fullname, 'Valid format');
+		valCounter++;
 	}
+
 }
 
 function validateEmail() {
+	valCounter = 0;
+	emailValue = email.value.trim();
 	if (emailValue === '') {
 		setErrorFor(email, 'Email cannot be blank');
 	}
@@ -64,10 +103,13 @@ function validateEmail() {
 	}
 	else {
 		setSuccessFor(email, 'Valid format');
+		valCounter++;
 	}
 }
 
 function validatePhone() {
+	valCounter = 0;
+	phoneValue = phone.value.trim();
 	if (phoneValue === '') {
 		setErrorFor(phone, 'Phone cannot be blank');
 	}
@@ -76,36 +118,88 @@ function validatePhone() {
 	}
 	else {
 		setSuccessFor(phone, 'Valid phonenumber');
+		valCounter++;
 	}
 
 }
-function validatePassword() {
-	if (passwordValue === '') {
-		setErrorFor(password, 'Password cannot be blank');
+
+function validatePass() {
+	valCounter = 0;
+	passwordValue = password.value.trim();
+	password2Value = password2.value.trim();
+	if (passwordValue.length == 0) {
+		setErrorFor(password, 'Cannot be blank');
 	}
-	else if (passwordValue !== password2Value) {
-		setErrorFor(password, 'Passwords does not match');
+	else if (passwordValue.length < 15) {
+		if (passwordValue != password2Value) {
+			setErrorFor(password, 'At least 15 characters...');
+			//setErrorFor(password2, 'Passwords do not match');
+		}
+		else if (passwordValue == password2Value) {
+			setErrorFor(password, 'At least 15 characters...');
+			//setErrorFor(password2, 'At least 15 characters...');
+		}
 	}
 	else if (!isPassword(passwordValue)) {
-		setErrorFor(password, 'Strong password required');
+		if (passwordValue != password2Value) {
+			setErrorFor(password, 'Weak password')
+			//setErrorFor(password2, 'Passwords do not match');
+		}
+		else if (passwordValue == password2Value) {
+			setErrorFor(password, 'Weak password')
+			//setErrorFor(password2, 'Weak password')
+		}
 	}
-	else {
-		setSuccessFor(password, 'Matching password');
+	else if (isPassword(passwordValue)) {
+		if (passwordValue != password2Value) {
+			setErrorFor(password, 'Passwords do not match')
+			setErrorFor(password2, 'Passwords do not match')
+		}
+		else if (passwordValue == password2Value) {
+			setSuccessFor(password, 'Matching passwords')
+			setSuccessFor(password2, 'Matching passwords')
+			valCounter++;
+		}
 	}
-
 }
 
-function validatePassword2() {
-	if (password2Value === '') {
-		setErrorFor(password2, 'Confirmation Password cannot be blank');
+function validatePass2() {
+	valCounter = 0;
+	passwordValue = password.value.trim();
+	password2Value = password2.value.trim();
+	if (password2Value.length == 0) {
+		setErrorFor(password2, 'Cannot be blank');
 	}
-	else if (password2Value !== passwordValue) {
-		setErrorFor(password2, 'Passwords does not match');
+	else if (password2Value.length < 15) {
+		if (passwordValue != password2Value) {
+			setErrorFor(password2, 'At least 15 characters...');
+			//setErrorFor(password, 'Passwords do not match');
+		}
+		else if (passwordValue == password2Value) {
+			setErrorFor(password2, 'At least 15 characters...');
+			//setErrorFor(password, 'At least 15 characters...');
+		}
 	}
 	else if (!isPassword(password2Value)) {
-		setErrorFor(password2, 'Strong password required');
-	} else {
-		setSuccessFor(password2, 'Matching password');
+		if (passwordValue != password2Value) {
+			setErrorFor(password2, 'Weak password')
+			//setErrorFor(password, 'Passwords do not match');
+		}
+		else if (passwordValue == password2Value) {
+			setErrorFor(password2, 'Weak password')
+			//setErrorFor(password, 'Weak password')
+		}
+	}
+	else if (isPassword(password2Value)) {
+		if (passwordValue != password2Value) {
+			setErrorFor(password2, 'Passwords do not match')
+			setErrorFor(password, 'Passwords do not match')
+		}
+		else if (passwordValue == password2Value) {
+			setSuccessFor(password2, 'Matching passwords')
+			setSuccessFor(password, 'Matching passwords')
+			valCounter++;
+		}
 	}
 }
 
