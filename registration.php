@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +15,7 @@
     <div class="loginbox scroll">
         <img src="img/avatar2.png" alt="avatar image" class="avatar">
         <h1>Create Account</h1>
+        
         <form name= "registration" method="post" action="" id="form" class="form">
             <div class="message" id="message"></div>
             <br>
@@ -26,7 +26,7 @@
             </div>
             <div class="form-control">
                 <label for="name">Name*</label>
-                <input type="text" name="name" placeholder="Enter your full name" id="fullname"><br>
+                <input type="text" name="name" placeholder="Enter your full name" id="Name"><br>
                 <small>Your full name</small>
             </div>
             <div class="form-control">
@@ -60,9 +60,9 @@
                 <input type="submit" name="submit" value="Register" id="but_submit">
         </form>
     </div>
-</div>  
+</div>
+    
 </body>
-</html>
 
 <!-- ******************************************************************* JAVASCRIPT *******************************************************************-->
 <!-- jQuery has to be loaded 1st-->

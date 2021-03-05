@@ -1,41 +1,13 @@
-
-// GETTERS
+// GETTERS **********************************************
 var form = document.getElementById('form');
-var username = document.getElementById("username")
-var fullname = document.getElementById('fullname');
+var username = document.getElementById('username');
+var Name = document.getElementById('Name');
 var email = document.getElementById('email');
 var phone = document.getElementById('phone');
-var password = document.getElementById("password");
+var password = document.getElementById('password');
 var password2 = document.getElementById('password2');
 
-// EVENT LISTENERS
-/*
-form.addEventListener('submit', e => {
-	e.preventDefault();
-
-});
-
-form.addEventListener('submit', e => {
-	e.preventDefault();
-
-	validateForm();
-	//alert('eae');
-});
-
-form.addEventListener("submit", function (event) {
-	event.preventDefault() // Will cancel submit if validation is not successful
-});
-*/
-username.addEventListener("input", validateUsername);
-email.addEventListener("input", validateEmail);
-phone.addEventListener("input", validatePhone);
-password.addEventListener("input", validatePass);
-password2.addEventListener("input", validatePass2);
-fullname.addEventListener("input", validateName);
-//form.addEventListener("submit", validateForm);
-
-var valCounter = 0;
-
+// VARIABLES *******************************************
 var usernameValue;
 var nameValue;
 var emailValue;
@@ -43,20 +15,33 @@ var phoneValue;
 var passwordValue;
 var password2Value;
 
+var validUser = false;
+var validName = false;
+var validEmail = false;
+var validPhone = false;
+var validPass1 = false;
+var validPass2 = false;
+
+// EVENT NADLER ****************************************
+username.addEventListener("input", validateUsername);
+email.addEventListener("input", validateEmail);
+phone.addEventListener("input", validatePhone);
+password.addEventListener("input", validatePass);
+password2.addEventListener("input", validatePass2);
+Name.addEventListener("input", validateName);
+
 form.addEventListener('submit', e => {
 	e.preventDefault();
 
-	e.validateUsername();
-	e.validateName();
-	e.validateEmail();
-	e.validatePhone();
-	e.validatePass();
-	e.validatePass2();
+	//checkInputs();
 });
+
+
+// FUNCTIONS *******************************************
 
 //FUNCTIONS Validators:
 function validateUsername() {
-	valCounter = 0;
+	validUser = false;
 	usernameValue = username.value.trim();
 	if (usernameValue === '') {
 		setErrorFor(username, 'Username cannot be blank');
@@ -66,31 +51,31 @@ function validateUsername() {
 	}
 	else {
 		setSuccessFor(username, 'Valid format');
-		valCounter++;
+		validUser = true;
 	}
 }
 
 function validateName() {
-	valCounter = 0;
-	nameValue = fullname.value.trim();
+	validName = false;
+	nameValue = Name.value.trim();
 	if (nameValue.length = 0) {
-		setErrorFor(fullname, 'Name cannot be blank');
+		setErrorFor(Name, 'Name cannot be blank');
 	}
-	else if (nameValue.length <= 5) {
-		setErrorFor(fullname, 'At least 5 characters');
+	else if (nameValue.length < 5) {
+		setErrorFor(Name, 'At least 5 characters');
 	}
 	else if (nameValue.length >= 50) {
-		setErrorFor(fullname, 'Name is too long');
+		setErrorFor(Name, 'Name is too long');
 	}
 	else {
-		setSuccessFor(fullname, 'Valid format');
-		valCounter++;
+		setSuccessFor(Name, 'Valid format');
+		validName = true;
 	}
 
 }
 
 function validateEmail() {
-	valCounter = 0;
+	validEmail = false;
 	emailValue = email.value.trim();
 	if (emailValue === '') {
 		setErrorFor(email, 'Email cannot be blank');
@@ -103,12 +88,12 @@ function validateEmail() {
 	}
 	else {
 		setSuccessFor(email, 'Valid format');
-		valCounter++;
+		validEmail = true;
 	}
 }
 
 function validatePhone() {
-	valCounter = 0;
+	validPhone = false;
 	phoneValue = phone.value.trim();
 	if (phoneValue === '') {
 		setErrorFor(phone, 'Phone cannot be blank');
@@ -118,13 +103,13 @@ function validatePhone() {
 	}
 	else {
 		setSuccessFor(phone, 'Valid phonenumber');
-		valCounter++;
+		validPhone = true;
 	}
 
 }
 
 function validatePass() {
-	valCounter = 0;
+	validPass1 = false;
 	passwordValue = password.value.trim();
 	password2Value = password2.value.trim();
 	if (passwordValue.length == 0) {
@@ -158,13 +143,14 @@ function validatePass() {
 		else if (passwordValue == password2Value) {
 			setSuccessFor(password, 'Matching passwords')
 			setSuccessFor(password2, 'Matching passwords')
-			valCounter++;
+			validPass1 = true;
+			validPass2 = true;
 		}
 	}
 }
 
 function validatePass2() {
-	valCounter = 0;
+	validPass2 = false;
 	passwordValue = password.value.trim();
 	password2Value = password2.value.trim();
 	if (password2Value.length == 0) {
@@ -198,7 +184,8 @@ function validatePass2() {
 		else if (passwordValue == password2Value) {
 			setSuccessFor(password2, 'Matching passwords')
 			setSuccessFor(password, 'Matching passwords')
-			valCounter++;
+			validPass1 = true;
+			validPass2 = true;
 		}
 	}
 }
