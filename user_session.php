@@ -1,5 +1,4 @@
 <?php
-
 // Start the session
 session_start();
 
@@ -12,5 +11,4 @@ if(isset($_SESSION["username"]) === true)
     echo '<a href="user_logout.php" class="top">Logout </a>';
     exit;
 }
-
 ?>

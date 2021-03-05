@@ -3,8 +3,6 @@ $(document).ready(function () {
     var msg = "";
     $("#message").html('Please fill in the form.');
     $("#but_submit").click(function () {
-
-
         if (validUser && validName && validEmail && validPhone && validPass1 && validPass2) {
             $.ajax({
                 url: 'user_create_seq.php',

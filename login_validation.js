@@ -1,15 +1,31 @@
-// GETTERS
+// GETTERS ***************************************************
 var form = document.getElementById('form');
 var username = document.getElementById("username");
 var password = document.getElementById("password");
 
-// EVENT LISTENERS
-username.addEventListener("input", validateUsername);
-password.addEventListener("input", validatePass);
+// VARIABLES *************************************************
+var usernameValue;
+var passwordValue;
 
+var validUser = false;
+var validPass = false;
+
+
+// EVENT LISTENERS ********************************************
+username.addEventListener("input", validateUsername); // will validate on iput
+password.addEventListener("input", validatePass); // will validate on iput
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    validateUsername(); // will validate on submit
+    validatePass(); // will validate on submit
+});
+
+// FUNCTIONS **************************************************
 // FUNCTIONS: Validation
 function validateUsername() {
-    var usernameValue = username.value.trim();
+    usernameValue = username.value.trim();
+    validPass = false;
     if (usernameValue === '') {
         setErrorFor(username, 'Username cannot be blank');
     }
@@ -18,10 +34,12 @@ function validateUsername() {
     }
     else {
         setSuccessFor(username, 'Seems OK');
+        validUser = true;
     }
 }
 function validatePass() {
-    var passwordValue = password.value.trim();
+    passwordValue = password.value.trim();
+    validPass = false;
     if (passwordValue === '') {
         setErrorFor(password, 'Password cannot be blank');
     }
@@ -30,6 +48,7 @@ function validatePass() {
     }
     else {
         setSuccessFor(password, 'Seems OK');
+        validPass = true;
     }
 }
 

@@ -1,4 +1,10 @@
 <?php
+// ************************** NOTES *****************************
+//This code is used in multiple files 
+//isuser_avbl & isemail avbl are defined earlier
+//please check user_create_seq.php & user_update_seq.php files!!!
+// **************************************************************
+
 if($isuser_avbl == true && $isemail_avbl == true) 
 {
     $sql="insert into users (name, username, password, email, phone, created_on)

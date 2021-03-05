@@ -1,8 +1,8 @@
 <?php
 // Logged in user cannot reach this page.
 include 'user_session.php';
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,12 +27,12 @@ include 'user_session.php';
             <div class="form-control">
                 <label for="username">Username:</label>
                 <input type="text" name="username" placeholder="Enter your username" id="username"><br>
-                <small>Minimum 5 letters.</small>
+                <small>Username</small>
             </div>
             <div class="form-control">
                 <label for="username">Password:</label>
                 <input type="password" name="password" placeholder="Enter your password" id="password"><br>
-                <small>Between 6-20 characters</small>
+                <small>Password</small>
             </div>
             <a href="registration.php">Registration</a>
             <br>

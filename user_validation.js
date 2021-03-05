@@ -38,13 +38,10 @@ form.addEventListener('submit', e => {
 	validatePhone();
 	validatePass();
 	validatePass2();
-
-	//checkInputs();
 });
 
 
 // FUNCTIONS *******************************************
-
 //FUNCTIONS Validators:
 function validateUsername() {
 	validUser = false;

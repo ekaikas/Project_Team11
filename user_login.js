@@ -1,20 +1,26 @@
+//jQuery
 $(document).ready(function () {
-
+    $("#message").html('Welcome');
     $("#but_submit").click(function () {
-        var username = $("#form_username").val().trim();
-        var password = $("#form_password").val().trim();
-
-        if (username != "" && password != "") {
+        if (validUser && validPass) {
             $.ajax({
                 url: 'user_login.php',
                 type: 'post',
-                data: { username: username, password: password },
+                data: { username: usernameValue, password: passwordValue },
                 success: function (response) {
                     var msg = "";
                     if (response == 1) {
                         window.location = "index.php";
-                    } else {
-                        msg = "Invalid username and password!";
+                    }
+                    else if (response == 2) {
+                        msg = "Wrong password!";
+                    }
+                    else if (response == 3) {
+                        msg = "Account does not exist"
+                    }
+                    else if (response == 4) {
+                        msg = "Error";
+                        alert('un is: ' + usernameValue + 'unBool is: ' + validUser + 'pwBool is: ' + validPass + 'pw is: ' + passwordValue)
                     }
                     $("#message").html(msg);
                 }
@@ -24,5 +30,4 @@ $(document).ready(function () {
             $("#message").html('All fields are mandatory!');
         }
     });
-
 });

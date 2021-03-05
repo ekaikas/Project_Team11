@@ -130,7 +130,7 @@ color: #ffc107;
     position: absolute;
 	bottom: 10px;
 	left: 0;
-	visibility: visible;
+	visibility: hidden;
 }
 .form-control.success small {
 	color: #1ecc2c;
