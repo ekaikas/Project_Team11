@@ -32,6 +32,12 @@ Name.addEventListener("input", validateName);
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
+	validateUsername();
+	validateName();
+	validateEmail();
+	validatePhone();
+	validatePass();
+	validatePass2();
 
 	//checkInputs();
 });

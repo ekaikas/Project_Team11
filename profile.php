@@ -2,7 +2,7 @@
 // Makes $_SESSION[] available
 session_start();
 // Read user data from DB
-include 'read_profile.php';
+include 'user_read.php';
 
 // Redirect user, if user is manually trying to access location when not logged in.
 if(isset($_SESSION["username"]) === false)
@@ -20,7 +20,7 @@ echo $created_on; //NOTE: server time (UTC) may be displayed
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="blur">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,32 +39,32 @@ echo $created_on; //NOTE: server time (UTC) may be displayed
             <div class="form-control">
                 <label for="username">Username:</label>
                 <input type="text" name="username" placeholder="Enter your username" value="<?php echo $_SESSION["username"];?>" id="username"><br>
-                <small>At least 5 character long</small>
+                <small>Current username</small>
             </div>
             <div class="form-control">
                 <label for="name">Name:</label>
                 <input type="text" name="name" placeholder="Enter your full name" value="<?php echo $_SESSION["name"];?>" id="Name"><br>
-                <small>Your full name</small>
+                <small>Current name</small>
             </div>
             <div class="form-control">
                 <label for="email">Email:</label>
                 <input type="text" name="email" placeholder="Enter your email" value="<?php echo $_SESSION["email"];?>" id="email"><br>
-                <small>Existing email address</small>
+                <small>Current email address</small>
             </div>
             <div class="form-control">
                 <label for="mobile">Phone:</label>
                 <input type="tel" name="phone" placeholder="Enter your phone number" value="<?php echo $_SESSION["phone"];?>" id="phone"><br>
-                <small>+00 0000 0000</small>
+                <small>Current phone number</small>
             </div>
             <div class="form-control">
                 <label for="password">New password:</label>
                 <input type="password" name="password" placeholder="Enter your password" id="password"><br>
-                <small>Strong password</small>
+                <small>Re-new password</small>
             </div>
             <div class="form-control">
                 <label for="password">Confirm password:</label>
                 <input type="password" name="password2" placeholder="Confirm your password" id="password2"><br>
-                <small>Strong password</small>
+                <small>Re-new password</small>
             </div>
                 <a href="https://passwordsgenerator.net/">Password generator</a>
                 <br>
@@ -73,9 +73,23 @@ echo $created_on; //NOTE: server time (UTC) may be displayed
                 <a href="index.php">Back to main page</a>
                 <br>
                 <br>
-            <input type="submit" name="submit" value="Save" id="but_submit">
+            <input class="open" type="submit" name="submit" value="Save" id="but_submit">
         </form>
     </div>
+</div>
+<!-- ******************************************* POP UP BOX ******************************************* -->
+<div>
+        <!--Creates the popup body-->
+    <div class="popup-overlay html-pop">
+    <!--Creates the popup content-->
+    <div class="popup-content html-pop">
+        <h2>Notification</h2>
+        <div id = "pop_message"></div>
+        <p> </p>
+        <!--popup's close button-->
+        <button class="close">Close</button> 
+    </div>
+</div>
 </body>
 </html>
 

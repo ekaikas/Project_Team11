@@ -1,3 +1,11 @@
+<?php
+// Logged in user cannot reach this page.
+session_start();
+if(isset($_SESSION["username"]) === true)
+{
+    header("location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,9 +69,23 @@
         </form>
     </div>
 </div>
-    
-</body>
 
+</div>
+<!-- ******************************************* POP UP BOX ******************************************* -->
+<div>
+        <!--Creates the popup body-->
+    <div class="popup-overlay html-pop">
+    <!--Creates the popup content-->
+    <div class="popup-content html-pop">
+        <h2>Notification</h2>
+        <div id = "pop_message"></div>
+        <p> </p>
+        <!--popup's close button-->
+        <button class="close">Close</button> 
+    </div>
+</div>
+</body>
+</html>
 <!-- ******************************************************************* JAVASCRIPT *******************************************************************-->
 <!-- jQuery has to be loaded 1st-->
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
