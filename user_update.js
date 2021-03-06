@@ -1,9 +1,8 @@
 // jQuery
 $(document).ready(function () {
     var msg = "";
-    $("#message").html('Please complete the form.');
+    //$("#message").html('Please complete the form.');
     $("#but_submit").click(function () {
-
         if (validUser && validName && validEmail && validPhone && validPass1 && validPass2) {
             $.ajax({
                 url: 'user_update_seq.php',
@@ -13,36 +12,28 @@ $(document).ready(function () {
 
                     if (response == 1) {
                         //window.location = "profile.php";
-                        window.location.href = "#message";
+                        //window.location.href = "#message";
                         msg = "Changes were saved."
-
-
                     }
                     else if (response == 100) {
                         msg = "Username already in use.";
-
                     }
                     else if (response == 101) {
                         msg = "Email address already in use";
-
                     }
                     else if (response == 102) {
                         msg = "Username and email not available.";
-
                     }
                     else {
                         msg = "There was an internal error. Try again.";
-
                     }
-                    $("#message").html(msg);
                     $("p").html(msg);
-
                 }
             });
         }
         else {
             //$("#message").html('Validation failed!');
-            msg = "Incomplete submission!";
+            msg = "Submission Failed! All changes must be valid!";
             $("p").html(msg);
         }
     });

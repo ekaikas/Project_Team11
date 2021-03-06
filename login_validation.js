@@ -4,21 +4,27 @@ var username = document.getElementById("username");
 var password = document.getElementById("password");
 
 // VARIABLES *************************************************
+// They will be used in the validation process
 var usernameValue;
 var passwordValue;
 
+// They will be used in jQuery script in user_login.js => DB operations
 var validUser = false;
 var validPass = false;
 
 
 // EVENT LISTENERS ********************************************
-username.addEventListener("input", validateUsername); // will validate on iput
-password.addEventListener("input", validatePass); // will validate on iput
+// will validate on iput
+username.addEventListener("input", validateUsername);
+password.addEventListener("input", validatePass);
 
 form.addEventListener('submit', e => {
+    // Will prevent event (submit button will not reload the page)! => good for validation
     e.preventDefault();
-    validateUsername(); // will validate on submit
-    validatePass(); // will validate on submit
+
+    // will validate on submit
+    validateUsername();
+    validatePass();
 });
 
 // FUNCTIONS **************************************************

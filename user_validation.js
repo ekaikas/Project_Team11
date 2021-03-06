@@ -8,6 +8,7 @@ var password = document.getElementById('password');
 var password2 = document.getElementById('password2');
 
 // VARIABLES *******************************************
+// They will be used in the validation proc
 var usernameValue;
 var nameValue;
 var emailValue;
@@ -15,6 +16,7 @@ var phoneValue;
 var passwordValue;
 var password2Value;
 
+// They will be used in jQuery script in user_login.js => DB operations
 var validUser = false;
 var validName = false;
 var validEmail = false;
@@ -23,21 +25,27 @@ var validPass1 = false;
 var validPass2 = false;
 
 // EVENT NADLER ****************************************
+// will validate on iput
 username.addEventListener("input", validateUsername);
+Name.addEventListener("input", validateName);
 email.addEventListener("input", validateEmail);
 phone.addEventListener("input", validatePhone);
-password.addEventListener("input", validatePass);
+password.addEventListener("input", validatePass); // passwords will double check each other :)
 password2.addEventListener("input", validatePass2);
-Name.addEventListener("input", validateName);
+password.addEventListener("input", validatePass2);
+password2.addEventListener("input", validatePass);
+
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
-	validateUsername();
-	validateName();
-	validateEmail();
-	validatePhone();
-	validatePass();
-	validatePass2();
+
+	// If they are called, validation will be double cheked on click
+	//validateUsername();
+	//validateName();
+	//validateEmail();
+	//validatePhone();
+	//validatePass();
+	//validatePass2();
 });
 
 
@@ -53,7 +61,7 @@ function validateUsername() {
 		setErrorFor(username, 'Less than 5 character long');
 	}
 	else {
-		setSuccessFor(username, 'Valid format');
+		setSuccessFor(username, 'Checked');
 		validUser = true;
 	}
 }
@@ -71,10 +79,9 @@ function validateName() {
 		setErrorFor(Name, 'Name is too long');
 	}
 	else {
-		setSuccessFor(Name, 'Valid format');
+		setSuccessFor(Name, 'Checked');
 		validName = true;
 	}
-
 }
 
 function validateEmail() {
@@ -90,7 +97,7 @@ function validateEmail() {
 		setErrorFor(email, 'Email is too long');
 	}
 	else {
-		setSuccessFor(email, 'Valid format');
+		setSuccessFor(email, 'Checked');
 		validEmail = true;
 	}
 }
@@ -105,49 +112,32 @@ function validatePhone() {
 		setErrorFor(phone, 'Accepted format: +00 0000 0000');
 	}
 	else {
-		setSuccessFor(phone, 'Valid phonenumber');
+		setSuccessFor(phone, 'Checked');
 		validPhone = true;
 	}
-
 }
 
 function validatePass() {
 	validPass1 = false;
 	passwordValue = password.value.trim();
 	password2Value = password2.value.trim();
+
 	if (passwordValue.length == 0) {
 		setErrorFor(password, 'Cannot be blank');
 	}
 	else if (passwordValue.length < 15) {
-		if (passwordValue != password2Value) {
-			setErrorFor(password, 'At least 15 characters...');
-			//setErrorFor(password2, 'Passwords do not match');
-		}
-		else if (passwordValue == password2Value) {
-			setErrorFor(password, 'At least 15 characters...');
-			//setErrorFor(password2, 'At least 15 characters...');
-		}
+		setErrorFor(password, 'At least 15 characters...');
 	}
 	else if (!isPassword(passwordValue)) {
-		if (passwordValue != password2Value) {
-			setErrorFor(password, 'Weak password')
-			//setErrorFor(password2, 'Passwords do not match');
-		}
-		else if (passwordValue == password2Value) {
-			setErrorFor(password, 'Weak password')
-			//setErrorFor(password2, 'Weak password')
-		}
+		setErrorFor(password, 'Weak password');
 	}
 	else if (isPassword(passwordValue)) {
 		if (passwordValue != password2Value) {
-			setErrorFor(password, 'Passwords do not match')
-			setErrorFor(password2, 'Passwords do not match')
+			setNoteFor(password, 'Strong password');
 		}
-		else if (passwordValue == password2Value) {
-			setSuccessFor(password, 'Matching passwords')
-			setSuccessFor(password2, 'Matching passwords')
+		else {
+			setSuccessFor(password, 'Matching password');
 			validPass1 = true;
-			validPass2 = true;
 		}
 	}
 }
@@ -156,38 +146,22 @@ function validatePass2() {
 	validPass2 = false;
 	passwordValue = password.value.trim();
 	password2Value = password2.value.trim();
+
 	if (password2Value.length == 0) {
 		setErrorFor(password2, 'Cannot be blank');
 	}
 	else if (password2Value.length < 15) {
-		if (passwordValue != password2Value) {
-			setErrorFor(password2, 'At least 15 characters...');
-			//setErrorFor(password, 'Passwords do not match');
-		}
-		else if (passwordValue == password2Value) {
-			setErrorFor(password2, 'At least 15 characters...');
-			//setErrorFor(password, 'At least 15 characters...');
-		}
+		setErrorFor(password2, 'At least 15 characters...');
 	}
 	else if (!isPassword(password2Value)) {
-		if (passwordValue != password2Value) {
-			setErrorFor(password2, 'Weak password')
-			//setErrorFor(password, 'Passwords do not match');
-		}
-		else if (passwordValue == password2Value) {
-			setErrorFor(password2, 'Weak password')
-			//setErrorFor(password, 'Weak password')
-		}
+		setErrorFor(password2, 'Weak password');
 	}
 	else if (isPassword(password2Value)) {
 		if (passwordValue != password2Value) {
-			setErrorFor(password2, 'Passwords do not match')
-			setErrorFor(password, 'Passwords do not match')
+			setNoteFor(password2, 'Strong password');
 		}
-		else if (passwordValue == password2Value) {
-			setSuccessFor(password2, 'Matching passwords')
-			setSuccessFor(password, 'Matching passwords')
-			validPass1 = true;
+		else {
+			setSuccessFor(password2, 'Matching password');
 			validPass2 = true;
 		}
 	}
@@ -200,7 +174,12 @@ function setErrorFor(input, message) {
 	formControl.className = 'form-control error';
 	small.innerText = message;
 }
-
+function setNoteFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control notif';
+	small.innerText = message;
+}
 function setSuccessFor(input, message) {
 	const formControl = input.parentElement;
 	const small = formControl.querySelector('small');

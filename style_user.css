@@ -199,26 +199,54 @@ button:hover {
   color: #ffffff;
 }
 /***************form validations******************************/
+transition: background-color 5000s ease-in-out 0s;
+}
 .message {
 text-align: center;
 color: #ffc107;
 }
+/* auto-fill atttributes */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: burlywood;
+}
+
+/***********************************************/
+
 .form-control {
 	margin-bottom: 0px;
 	padding-bottom: 10px;
 	position: relative;
 }
+.form-control input{
+	border-color: burlywood;
+  color: burlywood;
 
-.form-control.success input {
-	border-color: #1ecc2c;
 }
-
+.form-control.success input{
+	border-color: #1ecc2c;
+  color: #9cbb9f;
+  -webkit-text-fill-color: #9cbb9f;
+}
+.form-control.notif input {
+	border-color: #bb9562;
+  -webkit-text-fill-color: #bb9562;
+}
 .form-control.error input {
 	border-color: #e73c45;
+  color: #ddadb0;
+  -webkit-text-fill-color: #ddadb0;
 }
 .form-control small {
-    color: #ffc107;
-    position: absolute;
+  color: burlywood;
+  position: absolute;
 	bottom: 10px;
 	left: 0;
 	visibility: visible;
@@ -227,7 +255,10 @@ color: #ffc107;
 	color: #1ecc2c;
 	visibility: visible;
 }
-
+.form-control.notif small {
+	color: #bb9562;
+	visibility: visible;
+}
 .form-control.error small {
 	color: #e74c3c;
 	visibility: visible;
