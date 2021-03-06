@@ -149,6 +149,7 @@ input:-webkit-autofill:active  {
   /*displays pop-up when "active" class is present*/
   visibility: visible;
   text-align: center;
+  min-width: 35%;
 }
 
 .popup-content {
