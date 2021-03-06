@@ -19,7 +19,9 @@
     <header>
         <div class="container head">
             <nav role="navigation">
+
                 <div class="row">
+
                     <div class="col">
                         <div id="menuToggle">
                         <!--hamburger menu-->
@@ -39,6 +41,7 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="col logo_background">
                     <!--logo-->
                         <a href="index.php">
@@ -46,7 +49,9 @@
                             alt="Forum company logo" title="Forum Logo">
                         </a>
                     </div>
+
                     <div class="col">
+
                         <div class="row">
                         <!--top row for social media-->
                             <ul class="social">
@@ -67,6 +72,7 @@
                                 </li>
                             </ul>
                         </div>
+
                         <div class="row">
                         <!--bottom row for login and register-->
                             <ul class="login">
@@ -81,8 +87,11 @@
                                 </li>          
                             </ul>
                         </div>
+
                     </div>
+
                 </div>
+                
             </nav>    
         </div>
     </header>
