@@ -149,7 +149,6 @@ input:-webkit-autofill:active  {
   /*displays pop-up when "active" class is present*/
   visibility: visible;
   text-align: center;
-  min-width: 35%;
 }
 
 .popup-content {
@@ -228,4 +227,8 @@ color: #ffc107;
 .form-control.error small {
 	color: #e74c3c;
 	visibility: visible;
+}
+
+div.popup-overlay.html-pop.active {
+  min-width: 80%;
 }
