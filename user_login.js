@@ -9,7 +9,6 @@ $(document).ready(function () {
                 success: function (response) {
                     if (response == 1) {
                         window.location = "index.php";
-                        //msg = "Success! You are logged in."
                     }
                     else if (response == 2) {
                         openPopUp("Wrong password!");

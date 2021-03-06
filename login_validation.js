@@ -17,8 +17,6 @@ var validPass = false;
 // will validate on iput
 username.addEventListener("input", validateUsername);
 password.addEventListener("input", validatePass);
-username.addEventListener("input", validatePass);
-password.addEventListener("input", validateUsername);
 
 form.addEventListener('submit', e => {
     // Will prevent event (submit button will not reload the page)! => good for validation
