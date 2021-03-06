@@ -533,11 +533,10 @@ form {
   ul.social {
     position: absolute;
     margin-left: -53%;
-    margin-top: -4.5%;
   }
 
   ul.login {
-    padding-right: 6%;
+    padding-top: 4.5%;
   }
 
   .logo_background {
@@ -545,7 +544,7 @@ form {
   }
 
   .header_logo {
-    height: 5em;
+    height: 70px;
     width: auto;
     padding: 0;
   }
