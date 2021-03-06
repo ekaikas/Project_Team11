@@ -199,8 +199,6 @@ button:hover {
   color: #ffffff;
 }
 /***************form validations******************************/
-transition: background-color 5000s ease-in-out 0s;
-}
 .message {
 text-align: center;
 color: #ffc107;
@@ -236,8 +234,9 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: #9cbb9f;
 }
 .form-control.notif input {
-	border-color: #bb9562;
-  -webkit-text-fill-color: #bb9562;
+	color: #fdd867;
+  border-color: #ffc107;
+  -webkit-text-fill-color: #fdd867;
 }
 .form-control.error input {
 	border-color: #e73c45;
@@ -256,7 +255,7 @@ select:-webkit-autofill:focus {
 	visibility: visible;
 }
 .form-control.notif small {
-	color: #bb9562;
+	color: #ffc107;
 	visibility: visible;
 }
 .form-control.error small {

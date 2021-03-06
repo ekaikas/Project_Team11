@@ -8,7 +8,7 @@ var password = document.getElementById('password');
 var password2 = document.getElementById('password2');
 
 // VARIABLES *******************************************
-// They will be used in the validation proc
+// They will be used in the validation proc.
 var usernameValue;
 var nameValue;
 var emailValue;
@@ -40,12 +40,13 @@ form.addEventListener('submit', e => {
 	e.preventDefault();
 
 	// If they are called, validation will be double cheked on click
-	//validateUsername();
-	//validateName();
-	//validateEmail();
-	//validatePhone();
-	//validatePass();
-	//validatePass2();
+	// DO NOT DISABLE => validXxxx bools required fo user_update.js && user_create.js
+	validateUsername();
+	validateName();
+	validateEmail();
+	validatePhone();
+	validatePass();
+	validatePass2();
 });
 
 
@@ -126,19 +127,14 @@ function validatePass() {
 		setErrorFor(password, 'Cannot be blank');
 	}
 	else if (passwordValue.length < 15) {
-		setErrorFor(password, 'At least 15 characters...');
+		setErrorFor(password, 'Too short');
 	}
 	else if (!isPassword(passwordValue)) {
 		setErrorFor(password, 'Weak password');
 	}
 	else if (isPassword(passwordValue)) {
-		if (passwordValue != password2Value) {
-			setNoteFor(password, 'Strong password');
-		}
-		else {
-			setSuccessFor(password, 'Matching password');
-			validPass1 = true;
-		}
+		setSuccessFor(password, 'Strong password');
+		validPass1 = true;
 	}
 }
 
@@ -150,21 +146,19 @@ function validatePass2() {
 	if (password2Value.length == 0) {
 		setErrorFor(password2, 'Cannot be blank');
 	}
-	else if (password2Value.length < 15) {
-		setErrorFor(password2, 'At least 15 characters...');
+	else if (password2Value.length < passwordValue.length) {
+		setErrorFor(password2, 'Too short');
 	}
-	else if (!isPassword(password2Value)) {
-		setErrorFor(password2, 'Weak password');
-	}
-	else if (isPassword(password2Value)) {
-		if (passwordValue != password2Value) {
-			setNoteFor(password2, 'Strong password');
-		}
-		else {
+	else if (password2Value.length >= passwordValue.length) {
+		if (passwordValue == password2Value) {
 			setSuccessFor(password2, 'Matching password');
 			validPass2 = true;
 		}
+		else {
+			setErrorFor(password2, 'Password is not matching');
+		}
 	}
+
 }
 
 // FUNCTIONS Messages:

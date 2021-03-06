@@ -33,7 +33,7 @@ $(document).ready(function () {
         }
         else {
             //$("#message").html('Validation failed!');
-            msg = "Submission Failed! All changes must be valid!";
+            msg = "Requirements are not met!";
             $("p").html(msg);
         }
     });
