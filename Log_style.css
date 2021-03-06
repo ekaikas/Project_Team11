@@ -92,12 +92,15 @@ input:-webkit-autofill:active  {
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
+    transition: 0.2s;
 }
 .loginbox input[type="submit"]:hover
 {
     cursor: pointer;
-    background: #ffc107;
+    background: #e6323b;
     color: #000;
+    letter-spacing: 2px;
+    padding: 3px;
 }
 .loginbox a{
     text-decoration: none;
@@ -135,14 +138,13 @@ input:-webkit-autofill:active  {
   visibility: hidden;
   position: absolute;
   background: linear-gradient( rgba(0, 50, 50, 1), rgba(0, 0, 0, 1) );
-  border: 3px solid  #ffc107;;
+  border: 3px solid  #445decbd;;
   border-radius: 30px;
   width: 30%;
   height: 30%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 .popup-overlay.active {
@@ -164,18 +166,20 @@ input:-webkit-autofill:active  {
 button {
   display: inline-block;
   vertical-align: middle;
-  border-radius: 30px;
+  border-radius: 15px;
   margin: .20rem;
   font-size: 1rem;
-  color: #666666;
-  background: #ffffff;
-  border: 1px solid #666666;
+  color: #111;
+  background: snow;
+  border: 2px solid #111;
+  padding: 2px;
+  transition: 0.2s;
 }
 
 button:hover {
-  border: 1px solid #666666;
-  background: #666666;
-  color: #ffffff;
+  letter-spacing: 3px;
+  padding: 6px;
+  background-color: #445decbd;
 }
 
 /***************form validations******************************/
@@ -229,6 +233,15 @@ color: #ffc107;
 	visibility: visible;
 }
 
-div.popup-overlay.html-pop.active {
-  min-width: 80%;
+#error-message {
+  font-family: fantasy, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: snow;
 }
+
+/**** @open ****/
+div.popup-overlay.html-pop.active {
+  width: 280px;
+  height: 160px;
+  }
