@@ -228,3 +228,7 @@ color: #ffc107;
 	color: #e74c3c;
 	visibility: visible;
 }
+
+div.popup-overlay.html-pop.active {
+  min-width: 80%;
+}
