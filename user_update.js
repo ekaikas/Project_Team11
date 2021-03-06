@@ -1,6 +1,6 @@
 // jQuery
 $(document).ready(function () {
-    var msg = "";
+
     //$("#message").html('Please complete the form.');
     $("#but_submit").click(function () {
         if (validUser && validName && validEmail && validPhone && validPass1 && validPass2) {
@@ -9,7 +9,7 @@ $(document).ready(function () {
                 type: 'post',
                 data: { username: usernameValue, name: nameValue, email: emailValue, phone: phoneValue, password: passwordValue },
                 success: function (response) {
-
+                    var msg = "";
                     if (response == 1) {
                         //window.location = "profile.php";
                         //window.location.href = "#message";

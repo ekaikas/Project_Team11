@@ -1,33 +1,49 @@
 //jQuery
 $(document).ready(function () {
-    $("#message").html('Welcome');
     $("#but_submit").click(function () {
-        if (validUser && validPass) {
+        if (usernameValue.length > 0 && passwordValue.length > 0) {
             $.ajax({
                 url: 'user_login.php',
                 type: 'post',
                 data: { username: usernameValue, password: passwordValue },
                 success: function (response) {
-                    var msg = "";
                     if (response == 1) {
                         window.location = "index.php";
+                        //msg = "Success! You are logged in."
                     }
                     else if (response == 2) {
-                        msg = "Wrong password!";
+                        openPopUp("Wrong password!");
+                        setErrorFor(password, 'Wrong Password');
                     }
                     else if (response == 3) {
-                        msg = "Account does not exist"
+                        openPopUp("Account does not exist");
+                        setErrorFor(username, 'Account does not exist');
                     }
-                    else if (response == 4) {
-                        msg = "Error";
-                        alert('un is: ' + usernameValue + 'unBool is: ' + validUser + 'pwBool is: ' + validPass + 'pw is: ' + passwordValue)
+                    else { // response == 4
+                        openPopUp("Error");
                     }
-                    $("#message").html(msg);
                 }
             });
         }
         else {
-            $("#message").html('All fields are mandatory!');
+            //$("#message").html('All fields are mandatory!');
+            openPopUp('All fields required!');
         }
+    });
+
+    // Pop up messae
+    //appends an "active" class to .popup and .popup-content when the "Open" button is clicked
+    function openPopUp(onScreen) {
+        $("p").html(onScreen);
+        $(".popup-overlay, .popup-content").addClass("active");
+        $(".page-bckgrnd").addClass("active");
+        $(".loginbox").addClass("active");
+    }
+
+    //removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+    $(".close, .popup-overlay").on("click", function () {
+        $(".popup-overlay, .popup-content").removeClass("active");
+        $(".page-bckgrnd").removeClass("active");
+        $(".loginbox").removeClass("active");
     });
 });

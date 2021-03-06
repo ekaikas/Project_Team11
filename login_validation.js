@@ -17,6 +17,8 @@ var validPass = false;
 // will validate on iput
 username.addEventListener("input", validateUsername);
 password.addEventListener("input", validatePass);
+username.addEventListener("input", validatePass);
+password.addEventListener("input", validateUsername);
 
 form.addEventListener('submit', e => {
     // Will prevent event (submit button will not reload the page)! => good for validation
@@ -35,11 +37,8 @@ function validateUsername() {
     if (usernameValue === '') {
         setErrorFor(username, 'Username cannot be blank');
     }
-    else if (usernameValue.length < 5) {
-        setErrorFor(username, 'Less than 5 character long');
-    }
     else {
-        setSuccessFor(username, 'Seems OK');
+        setNoteFor(username, 'Ready to submit');
         validUser = true;
     }
 }
@@ -49,11 +48,8 @@ function validatePass() {
     if (passwordValue === '') {
         setErrorFor(password, 'Password cannot be blank');
     }
-    else if (passwordValue.length < 6) {
-        setErrorFor(password, 'A bit short...');
-    }
     else {
-        setSuccessFor(password, 'Seems OK');
+        setNoteFor(password, 'Ready to submit');
         validPass = true;
     }
 }
@@ -65,7 +61,12 @@ function setErrorFor(input, message) {
     formControl.className = 'form-control error';
     small.innerText = message;
 }
-
+function setNoteFor(input, message) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector('small');
+    formControl.className = 'form-control notif';
+    small.innerText = message;
+}
 function setSuccessFor(input, message) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');

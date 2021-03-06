@@ -70,7 +70,7 @@ function validateUsername() {
 function validateName() {
 	validName = false;
 	nameValue = Name.value.trim();
-	if (nameValue.length = 0) {
+	if (nameValue.length == 0) {
 		setErrorFor(Name, 'Name cannot be blank');
 	}
 	else if (nameValue.length < 5) {

@@ -1,17 +1,20 @@
 body{
     margin: 0;
     padding: 0;
+    
+    font-family: sans-serif;
+}
+.page-bckgrnd /* pop up window will change this, see it below */
+{
     background: url(img/glad_u_came_up.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    font-family: sans-serif;
 }
 p
 {
     color: red;
-    font-size: small;
     text-align: center;
 }
 
@@ -106,6 +109,75 @@ input:-webkit-autofill:active  {
     color: #ffc107
 }
 
+/***************pop up message / modal *********************************/
+.loginbox.active
+{
+    filter: blur(5px);
+}
+.page-bckgrnd.active
+{
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(img/glad_u_came_up.jpg);
+    alt: 'background image';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.html-pop {
+  font-family: "Helvetica Neue", sans-serif;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.popup-overlay {
+  /*Hides pop-up when there is no "active" class*/
+  visibility: hidden;
+  position: absolute;
+  background: linear-gradient( rgba(0, 50, 50, 1), rgba(0, 0, 0, 1) );
+  border: 3px solid  #ffc107;;
+  border-radius: 30px;
+  width: 30%;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.popup-overlay.active {
+  /*displays pop-up when "active" class is present*/
+  visibility: visible;
+  text-align: center;
+}
+
+.popup-content {
+  /*Hides pop-up content when there is no "active" class */
+  visibility: hidden;
+}
+
+.popup-content.active {
+  /*Shows pop-up content when "active" class is present */
+  visibility: visible;
+}
+
+button {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 30px;
+  margin: .20rem;
+  font-size: 1rem;
+  color: #666666;
+  background: #ffffff;
+  border: 1px solid #666666;
+}
+
+button:hover {
+  border: 1px solid #666666;
+  background: #666666;
+  color: #ffffff;
+}
+
 /***************form validations******************************/
 
 .message {
@@ -117,17 +189,29 @@ color: #ffc107;
 	padding-bottom: 10px;
 	position: relative;
 }
+.form-control input{
+	border-color: burlywood;
+  color: burlywood;
 
-.form-control.success input {
-	border-color: #1ecc2c;
 }
-
+.form-control.success input{
+	border-color: #1ecc2c;
+  color: #9cbb9f;
+  -webkit-text-fill-color: #9cbb9f;
+}
+.form-control.notif input {
+	color: #fdd867;
+  border-color: #ffc107;
+  -webkit-text-fill-color: #fdd867;
+}
 .form-control.error input {
 	border-color: #e73c45;
+  color: #ddadb0;
+  -webkit-text-fill-color: #ddadb0;
 }
 .form-control small {
-    color: #ffc107;
-    position: absolute;
+  color: burlywood;
+  position: absolute;
 	bottom: 10px;
 	left: 0;
 	visibility: hidden;
@@ -136,7 +220,10 @@ color: #ffc107;
 	color: #1ecc2c;
 	visibility: visible;
 }
-
+.form-control.notif small {
+	color: #ffc107;
+	visibility: visible;
+}
 .form-control.error small {
 	color: #e74c3c;
 	visibility: visible;

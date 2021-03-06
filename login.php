@@ -16,7 +16,7 @@ include 'user_session.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body class = "page-bckgrnd">
     <div class="loginbox">
         <img src="img/avatar.png" alt="avatar image" class="avatar">
         <h1>Login Here</h1>
@@ -43,8 +43,22 @@ include 'user_session.php';
         </form>
     </div>
 </body>
-</html>
 
+<!-- ******************************************* POP UP BOX ******************************************* -->
+<div>
+        <!--Creates the popup body-->
+    <div class="popup-overlay html-pop">
+    <!--Creates the popup content-->
+    <div class="popup-content html-pop">
+        <h2>Notification</h2>
+        <div id = "pop_message"></div>
+        <p> </p>
+        <!--popup's close button-->
+        <button class="close">Close</button> 
+    </div>
+</div>
+
+</html>
 
 <!-- Javascript -->
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
