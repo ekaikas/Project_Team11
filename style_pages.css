@@ -551,25 +551,31 @@ form {
 
   /**************** Footer (Responsive) *****************/
 
-  div.col.foot_right {
-    position:absolute;
-    margin-right: 0;
+  footer {
+    margin-top: 35%;
   }
 
+  div.col.foot_right {
+    margin: 0;
+    padding: 0;
+    margin-top: -34%;
+  }
+/*
   div.col.foot_left {
     position:absolute;
     margin-right: 0;
   }
-
+*/
   div.col.foot_center {
-    position: relative;
+    display:unset;
     padding: 0;
-    margin-top: 50%;
+    margin-top: -50%;
   }
 
   img.footsie_logo {
     margin: 0;
     padding: 0;
+    display: none;
   }
 
 }
