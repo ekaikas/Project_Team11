@@ -572,3 +572,33 @@ form {
   }
 
 }
+
+
+
+/*******************************************************************/
+/*****************************  ID TABLE  **************************/
+/*******************************************************************/
+
+.id-table {
+  background-color: rgba(245, 243, 243, 0.651);
+  border: 3px black solid;
+  margin: auto;
+  width: auto;
+  color: black;
+  text-align: center;
+  box-shadow: 4px 4px rgba(36, 35, 37, 0.753);
+  margin-bottom: 20%;
+}
+
+.id-table th {
+  border: 2px black solid;
+  padding: 6px;
+  background-color:rgba(48, 52, 102, 0.925);
+  color: snow;  
+}
+
+.id-table td {
+  border: 2px black solid;
+  padding: 6px 3px;
+}
+
