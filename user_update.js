@@ -26,9 +26,7 @@ $(document).ready(function () {
             });
         }
         else {
-            //$("#message").html('Validation failed!');
-            msg = "Requirements are not met!";
-            $("p").html(msg);
+            openPopUp("All fields required!");
         }
     });
 
