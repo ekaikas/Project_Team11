@@ -68,16 +68,16 @@ echo $created_on; //NOTE: server time (UTC) may be displayed
             </div>
                 <a href="https://passwordsgenerator.net/">Password generator</a>
                 <br>
-                <a href="user_delete.php">Delete account</a>
-                <br>
                 <a href="index.php">Back to main page</a>
                 <br>
                 <br>
             <input class="open" type="submit" name="submit" value="Save" id="but_submit">
+            <input class="open" type="button" name="button" value="Delete Account" id="del_btn">
         </form>
     </div>
 </div>
 <!-- ******************************************* POP UP BOX ******************************************* -->
+<!-- Login Error -->
 <div class='container'>
     <div>
             <!--Creates the popup body-->
@@ -85,7 +85,7 @@ echo $created_on; //NOTE: server time (UTC) may be displayed
         <!--Creates the popup content-->
         <div class="popup-content html-pop">
             <!--<img class='error-pic' src="img/avatar2.png" alt="sad face">-->
-            <h2 class='error-message'>Login Error</h2>
+            <h2 class='error-message'>Error!</h2>
             <div id = "pop_message"></div>
             <p> </p>
             <!--popup's close button-->
@@ -93,6 +93,25 @@ echo $created_on; //NOTE: server time (UTC) may be displayed
         </div>
     </div>
 </div>
+
+<!-- Delete Account -->
+<div class='container'>
+    <div>
+            <!--Creates the popup body-->
+        <div class="popup-overlay_del html-pop">
+        <!--Creates the popup content-->
+        <div class="popup-content_del html-pop">
+            <!--<img class='error-pic' src="img/avatar2.png" alt="sad face">-->
+            <h2 class='del-message'>Delete Profile?</h2>
+            <div id = "pop_message"></div>
+            <p> </p>
+            <!--popup's close button-->
+            <button id="delete_acc">Delete</button> 
+            <button class="close" id="cancel_del">Cancel</button> 
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
 
@@ -103,3 +122,4 @@ echo $created_on; //NOTE: server time (UTC) may be displayed
 <!-- Has to be the last in load order!-->
 <script src="user_validation.js"></script>
 <script src="user_update.js"></script>
+<script src="user_delete.js"></script>

@@ -107,6 +107,7 @@ h1
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
+    margin-bottom: 4px;
 }
 .loginbox input[type="submit"]:hover
 {
@@ -114,6 +115,25 @@ h1
     background: #ffc107;
     color: #000;
 }
+
+.loginbox input[type="button"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1d3ce8;
+    color:white;
+    font-size: 18px;
+    border-radius: 20px;
+     margin-bottom: 4px;
+}
+.loginbox input[type="button"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
 .loginbox a{
     text-decoration: none;
     font-size: 12px;
@@ -128,9 +148,18 @@ h1
 {
     filter: blur(5px);
 }
-.page-bckgrnd.active
+.page-bckgrnd-reg.active /* */
 {
-    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(img/glad_u_came_up.jpg);
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(img/user_profile_bckgrnd.jpg);
+    alt: 'background image';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.page-bckgrnd-edit.active
+{
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(img/Registration_bckgrnd.jpg);
     alt: 'background image';
     background-size: cover;
     background-repeat: no-repeat;
@@ -173,6 +202,33 @@ h1
   /*Shows pop-up content when "active" class is present */
   visibility: visible;
 }
+.popup-overlay.active {
+  /*displays pop-up when "active" class is present*/
+  visibility: visible;
+  text-align: center;
+}
+
+/* Delete account window */
+.popup-overlay_del {
+  /*Hides pop-up when there is no "active" class*/
+  visibility: hidden;
+  position: absolute;
+  background: linear-gradient( rgba(0, 50, 50, 1), rgba(0, 0, 0, 1) );
+  border: 3px solid  #445decbd;;
+  border-radius: 30px;
+  width: 30%;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup-overlay_del.active {
+  /*displays pop-up when "active" class is present*/
+  visibility: visible;
+  text-align: center;
+}
+
+
 
 button {
   display: inline-block;
@@ -184,13 +240,14 @@ button {
   background: snow;
   border: 2px solid #111;
   padding: 2px;
-  transition: 0.2s;
+  transition: 0s; /* Can cause issues with alert()*/
 }
 
 button:hover {
   letter-spacing: 3px;
   padding: 6px;
   background-color: #445decbd;
+  transition: 0s; (/* Can cause issues with alert()*/)
 }
 /**** @open ****/
 div.popup-overlay.html-pop.active {
@@ -199,6 +256,13 @@ div.popup-overlay.html-pop.active {
 }
 
 #error-message {
+  font-family: fantasy, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: snow;
+}
+
+#del-message {
   font-family: fantasy, sans-serif;
   font-size: 1rem;
   letter-spacing: 1px;

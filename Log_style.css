@@ -168,7 +168,7 @@ button {
   background: snow;
   border: 2px solid #111;
   padding: 2px;
-  transition: 0.2s;
+  transition: 0s; /* Can cause issues with alert() */ 
 }
 
 button:hover {

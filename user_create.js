@@ -37,15 +37,14 @@ $(document).ready(function () {
     function openPopUp(onScreen) {
         $("p").html(onScreen);
         $(".popup-overlay, .popup-content").addClass("active");
-        $(".page-bckgrnd").addClass("active");
+        $(".page-bckgrnd-reg").addClass("active");
         $(".loginbox").addClass("active");
     }
 
     //removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
     $(".close, .popup-overlay").on("click", function () {
         $(".popup-overlay, .popup-content").removeClass("active");
-        $(".page-bckgrnd").removeClass("active");
+        $(".page-bckgrnd-reg").removeClass("active");
         $(".loginbox").removeClass("active");
     });
-
 });

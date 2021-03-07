@@ -2,19 +2,20 @@
 session_start();
 include 'db.php';
 
-$sql="DELETE FROM users where id = '".$_SESSION['id']."'";
-
-// TODO: Confirmation window???
-$query = mysqli_query($conn, $sql);
-if($query){
-    include_once 'user_logout.php';
-    header('location: index.php');
-}
-else
+$delete_cmd = trim($_POST['delete_cmd']);
+if($delete_cmd == 'delete')
 {
-    // TODO: error msg, not deleted
+    $sql="DELETE FROM users where id = '".$_SESSION['id']."'";
+    $query = mysqli_query($conn, $sql);
+    if($query){
+        //header('location: index.php');
+        include_once 'user_logout.php';    
+    }       
+    else
+    {
+        echo 1; //Error, account not deleted
+    }
 }
 $conn->close();
 ?>
 </body>
-</html>
