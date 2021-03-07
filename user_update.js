@@ -26,9 +26,7 @@ $(document).ready(function () {
             });
         }
         else {
-            //$("#message").html('Validation failed!');
-            msg = "Requirements are not met!";
-            $("p").html(msg);
+            openPopUp("All fields required!");
         }
     });
 
@@ -47,5 +45,4 @@ $(document).ready(function () {
         $(".page-bckgrnd-edit").removeClass("active");
         $(".loginbox").removeClass("active");
     });
-
 });

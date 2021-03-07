@@ -7,7 +7,7 @@ $sql="DELETE FROM users where id = '".$_SESSION['id']."'";
 // TODO: Confirmation window???
 $query = mysqli_query($conn, $sql);
 if($query){
-    include_once 'logout.php';
+    include_once 'user_logout.php';
     header('location: index.php');
 }
 else
