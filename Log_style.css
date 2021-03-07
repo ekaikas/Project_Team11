@@ -176,6 +176,18 @@ button:hover {
   padding: 6px;
   background-color: #445decbd;
 }
+/**** @open ****/
+div.popup-overlay.html-pop.active {
+  width: 280px;
+  height: 160px;
+}
+
+#error-message {
+  font-family: fantasy, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: snow;
+}
 
 /***************form validations******************************/
 
@@ -244,16 +256,3 @@ select:-webkit-autofill:focus {
 	color: #e74c3c;
 	visibility: visible;
 }
-
-#error-message {
-  font-family: fantasy, sans-serif;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  color: snow;
-}
-
-/**** @open ****/
-div.popup-overlay.html-pop.active {
-  width: 280px;
-  height: 160px;
-  }

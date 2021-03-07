@@ -124,14 +124,13 @@ h1
     color: #ffc107
 }
 
-/***************pop up message / modal *********************************/
 .loginbox.active
 {
     filter: blur(5px);
 }
-.page-bckgrnd-edit.active
+.page-bckgrnd.active
 {
-    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(img/Registration_bckgrnd.jpg);
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(img/glad_u_came_up.jpg);
     alt: 'background image';
     background-size: cover;
     background-repeat: no-repeat;
@@ -149,15 +148,14 @@ h1
   /*Hides pop-up when there is no "active" class*/
   visibility: hidden;
   position: absolute;
-  background: linear-gradient( rgba(0, 50, 50, 1), rgba(0, 0, 0, 0.2) );
-  border: 3px solid  #ffc107;;
+  background: linear-gradient( rgba(0, 50, 50, 1), rgba(0, 0, 0, 1) );
+  border: 3px solid  #445decbd;;
   border-radius: 30px;
   width: 30%;
   height: 30%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 .popup-overlay.active {
@@ -179,18 +177,32 @@ h1
 button {
   display: inline-block;
   vertical-align: middle;
-  border-radius: 30px;
+  border-radius: 15px;
   margin: .20rem;
   font-size: 1rem;
-  color: #666666;
-  background: #ffffff;
-  border: 1px solid #666666;
+  color: #111;
+  background: snow;
+  border: 2px solid #111;
+  padding: 2px;
+  transition: 0.2s;
 }
 
 button:hover {
-  border: 1px solid #666666;
-  background: #666666;
-  color: #ffffff;
+  letter-spacing: 3px;
+  padding: 6px;
+  background-color: #445decbd;
+}
+/**** @open ****/
+div.popup-overlay.html-pop.active {
+  width: 280px;
+  height: 160px;
+}
+
+#error-message {
+  font-family: fantasy, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: snow;
 }
 /***************form validations******************************/
 .message {

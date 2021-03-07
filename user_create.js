@@ -1,7 +1,5 @@
 // jQuery
 $(document).ready(function () {
-    var msg = "";
-    $("#message").html('Please fill in the form.');
     $("#but_submit").click(function () {
         if (validUser && validName && validEmail && validPhone && validPass1 && validPass2) {
             $.ajax({
@@ -14,25 +12,40 @@ $(document).ready(function () {
                         window.location = "login.php";
                     }
                     else if (response == 100) {
-                        msg = "Username already in use.";
+                        openPopUp("Username already in use.");
                     }
                     else if (response == 101) {
-                        msg = "Email address already in use";
+                        openPopUp("Email address already in use");
                     }
                     else if (response == 102) {
-                        msg = "Username and email not available.";
+                        openPopUp("Username and email not available.");
                     }
                     else {
-                        msg = "There was an internal error. Try again.";
+                        openPopUp("There was an internal error.Try again.");
                     }
-                    $("#message").html(msg);
                 }
 
             });
         }
         else {
-            $("#message").html('Validation failed!');
+            openPopUp('All fields required!');
         }
+    });
+
+    // Pop up messae
+    //appends an "active" class to .popup and .popup-content when the "Open" button is clicked
+    function openPopUp(onScreen) {
+        $("p").html(onScreen);
+        $(".popup-overlay, .popup-content").addClass("active");
+        $(".page-bckgrnd").addClass("active");
+        $(".loginbox").addClass("active");
+    }
+
+    //removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+    $(".close, .popup-overlay").on("click", function () {
+        $(".popup-overlay, .popup-content").removeClass("active");
+        $(".page-bckgrnd").removeClass("active");
+        $(".loginbox").removeClass("active");
     });
 
 });

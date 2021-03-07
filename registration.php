@@ -72,16 +72,19 @@ if(isset($_SESSION["username"]) === true)
 
 </div>
 <!-- ******************************************* POP UP BOX ******************************************* -->
-<div>
-        <!--Creates the popup body-->
-    <div class="popup-overlay html-pop">
-    <!--Creates the popup content-->
-    <div class="popup-content html-pop">
-        <h2>Notification</h2>
-        <div id = "pop_message"></div>
-        <p> </p>
-        <!--popup's close button-->
-        <button class="close">Close</button> 
+<div class='container'>
+    <div>
+            <!--Creates the popup body-->
+        <div class="popup-overlay html-pop">
+        <!--Creates the popup content-->
+        <div class="popup-content html-pop">
+            <!--<img class='error-pic' src="img/avatar2.png" alt="sad face">-->
+            <h2 class='error-message'>Login Error</h2>
+            <div id = "pop_message"></div>
+            <p> </p>
+            <!--popup's close button-->
+            <button class="close">Close</button> 
+        </div>
     </div>
 </div>
 </body>
