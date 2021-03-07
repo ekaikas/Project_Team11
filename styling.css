@@ -251,6 +251,7 @@ li a:hover {
     text-align: right;
 }
 
+#bservice{ direction: rtl; }
 
 /* ######################################## BUTTONS #####################################*/
 button

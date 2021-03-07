@@ -35,9 +35,8 @@ password2.addEventListener("input", validatePass2);
 password.addEventListener("input", validatePass2);
 password2.addEventListener("input", validatePass);
 
-
 form.addEventListener('submit', e => {
-	e.preventDefault();
+	e.preventDefault(); //will prevent submission => no page reload. => validation
 
 	// If they are called, validation will be double cheked on click
 	// DO NOT DISABLE => validXxxx bools required fo user_update.js && user_create.js

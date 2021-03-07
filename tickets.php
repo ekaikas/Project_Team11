@@ -53,7 +53,7 @@
                     <label for="cnumber">Card Number</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" placeholder="Type the card number" id="cnumber" />
+                        <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx" id="cnumber" />
                         <i class="fa fa-check-circle" style="font-size:15px"></i>
                         <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
                         <small>Error message</small>
@@ -64,7 +64,7 @@
                     <label for="snumber">Sec Number</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" placeholder="3 digits number on the back of the card" id="snumber" />
+                        <input type="text" placeholder="3 digits number on the back of the card" id="snumber" />
                         <i class="fa fa-check-circle" style="font-size:15px"></i>
                         <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
                         <small>Error message</small>
@@ -86,7 +86,7 @@
                     <label for="t_amnt">Amount</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" placeholder="Select number of tickets" id="t_amnt" />
+                        <input type="number" min=0 placeholder="Select number of tickets" id="t_amnt" />
                         <i class="fa fa-check-circle" style="font-size:15px"></i>
                         <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
                         <small>Error message</small>
@@ -148,12 +148,15 @@
     </div>
 </div>
 
-<!--Link to javascript form validation-->
-<script src="Tickets_Form validation and Event handling.js"></script>
 
+
+<!--****************************************************Javascript ***************************************************************-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="ticket_validation.js"></script>
 
 <?php include "footer.php";
 ?>
