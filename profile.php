@@ -120,6 +120,5 @@ echo $created_on; //NOTE: server time (UTC) may be displayed
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Has to be the last in load order!-->
-<script src="user_validation.js"></script>
 <script src="user_update.js"></script>
 <script src="user_delete.js"></script>
