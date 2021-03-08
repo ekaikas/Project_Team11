@@ -1,4 +1,9 @@
 <?php
+//Will show $_SESSION[] vars!
+session_start();
+$user_id = $_SESSION['id']; // User ID is created in user_login.php
+
+
 // Connect to database 
 include 'db.php';
 
@@ -9,10 +14,40 @@ $t_amnt = trim($_POST['amount']); // ticket quantity
 $b_serv = trim($_POST['service']); //bottle service
 $purchase_date = date('Y-m-d H:i:s'); //date of purchase
 
-$sql="insert into purchases (event_name, customer, email, bottle_service, ticket_amnt, date_of_purchase)
-    values('$eventName', '$c_name', '$email', '$b_serv', '$t_amnt', '$purchase_date')";
+$avlbl_amnt;
+$new_amnt;
 
-if($conn->query($sql) === TRUE) 
+$sql_read="select available_quantity from tickets_avlbl where event_name = '$eventName'";
+$result = $conn->query($sql_read);
+if($result ->num_rows > 0)
+{
+    if($row = $result ->fetch_assoc())
+    {
+        $avlbl_amnt = $row['available_quantity'];
+    }    
+}
+else 
+{
+    $conn->error;
+}
+
+$new_amnt = $avlbl_amnt - $t_amnt;
+
+// 1) Check user availability => SQL query
+if($_SESSION['id'])
+{
+    $sql_ins="insert into purchases (event_name, user_id, customer, email, bottle_service, ticket_amnt, date_of_purchase)
+    values('$eventName', '$user_id', '$c_name', '$email', '$b_serv', '$t_amnt', '$purchase_date')";
+}
+else
+{
+    $sql_ins="insert into purchases (event_name, customer, email, bottle_service, ticket_amnt, date_of_purchase)
+    values('$eventName', '$c_name', '$email', '$b_serv', '$t_amnt', '$purchase_date')";
+}
+$sql_del="UPDATE tickets_avlbl set available_quantity='$new_amnt' where event_name='$eventName'";
+$conn->query($sql_del);
+// 2) Send SQL query => response => JS file: ticket_purchase.js
+if($conn->query($sql_ins) === TRUE) 
 {
     echo 1;
 }
@@ -22,14 +57,4 @@ else
     //$conn->error;
 }
 $conn->close();
-
-
-/*
-// Get user data from the FORM with $_POST:
-include 'user_get.php';
-// Check if username and email is  available
-include 'user_email_check.php';
-// Insert new registration data into database
-include 'user_create.php';
-*/
 ?>

@@ -3,6 +3,9 @@
     $meta_desc = "Forum Nightclub Tickets";
     $meta_keywords = "events, tickets, concert, dj, party, pre-purchase, online tickets, show pass, press pass";
     include "header.php";
+    include 'tickets_avlbl_db_read.php'; // Will fetch event data from DB
+    include 'user_read.php'; // Will fetch user data from DB (email and name)
+    
 ?> 
 
 <meta charset="UTF-8">
@@ -21,9 +24,9 @@
                     <div class="col-75">
                         <select name="cevent" id="cevent">   
                         <option ceventValue="NULL" id="cevent">--select--</option>             
-                        <option value="Full Moon Party">Full Moon Party - $5.10</option>
-                        <option value="The Summer Party">The Summer Party - $7.80</option>
-                        <option value="Pool Party">Pool Party - $6.90</option>
+                        <option value="Full Moon Party"><?php echo $a[1].' - $' .$a[3]; ?></option>
+                        <option value="The Summer Party"><?php echo $a[5].' - $' .$a[7]; ?></option>
+                        <option value="Pool Party"><?php echo $a[9].' - $' .$a[11]; ?></option>
                         </select> 
                         <i class="fa fa-check-circle" style="font-size:15px"></i>
                         <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
@@ -35,7 +38,7 @@
                         <label for="cardholder">Cardholder</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" placeholder="Type the cardholder name" maxlength="50" id="card_name"/>
+                            <input type="text" placeholder="Type the cardholder name" maxlength="50" id="card_name" value="<?php if($_SESSION['name']){echo $_SESSION['name'];}?>"/>
                             <i class="fa fa-check-circle" style="font-size:15px"></i>
                             <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
                             <small>Error message</small>
@@ -68,7 +71,7 @@
                         <label for="username">Email</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" placeholder="Type your email" maxlength="50" id="email" />
+                            <input type="text" placeholder="Type your email" maxlength="50" id="email" value="<?php if($_SESSION['email']){echo $_SESSION['email'];}?>" />
                             <i class="fa fa-check-circle" style="font-size:15px"></i>
                             <i class="fa fa-exclamation-circle" style="font-size:15px"></i>
                             <small>Error message</small>

@@ -19,13 +19,14 @@ var t_amntValue;
 var b_serviceValue;
 
 // They will be used in jQuery script in ticket_purch.js => DB operations
-var validEvent = true;
-var validHolder = true;
-var validCard = true;
-var validSec = true;
-var validEmail = true;
-var validAmnt = true;
-var validService = true;
+var validEvent = false;
+var validHolder = false;
+var validCard = false;
+var validSec = false;
+var validEmail = false;
+var validAmnt = false;
+var validService = false;
+var successful_purch = false; // Will be used to validate ticket purchase for tickets_avlbl_db_read.php
 
 // EVENT NADLER ****************************************
 // will validate on submission
@@ -51,6 +52,8 @@ function validateEvent() {
         setErrorFor(p_event, 'Make a selection');
     } else {
         setSuccessFor(p_event);
+        p_eventValue = p_event.value.trim();
+        //p_eventValue = p_eventValue.slice(0, p_eventValue.length - 1) // 6 char has to be sliced bc of the price tag - $89
         validEvent = true;
     }
 }
@@ -158,6 +161,7 @@ function isBankCard(card) {
 
 // jQuery ********************************************************************************************************************************************************************
 function insertToDB() {
+    alert('eventV: ' + p_eventValue);
     if (validEvent && validHolder && validCard && validSec && validEmail && validAmnt && validService) {
         $.ajax({
             url: 'ticket_purchase.php',
@@ -165,8 +169,9 @@ function insertToDB() {
             data: { eventname: p_eventValue, name: c_nameValue, email: emailValue, amount: t_amntValue, service: b_serviceValue },
             success: function (response) {
                 if (response == 1) {
-                    alert("Thank you for your purchase. You will receive an email shortly.");
-                    window.location.href = 'index.php';
+                    alert('eventV: ' + p_eventValue);
+                    //alert("Thank you for your purchase. You will receive an email shortly.");
+                    //window.location.href = 'index.php';
                 }
                 else {
                     alert("There was an internal error. Try again later.")
