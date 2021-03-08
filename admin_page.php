@@ -3,7 +3,7 @@
     $meta_desc = "Admin page for Forum Nightclub";
     $meta_keywords = "";  //intentionally left blank
     include "header.php";
-    include "access_admin.php";
+    //include "access_admin.php";
 ?> 
 
 <div class="panel">
