@@ -18,7 +18,7 @@ include 'user_session.php';
 
 <body class = "page-bckgrnd">
     <div class="loginbox">
-        <img src="img/avatar.png" alt="avatar image" class="avatar">
+        <img src="Img/avatar.png" alt="avatar image" class="avatar">
         <h1>Login Here</h1>
 
         <form name="login" method="post" action="" id="form" autocomplete="on" class="form">

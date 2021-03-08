@@ -25,42 +25,64 @@ if($result ->num_rows > 0)
     if($row = $result ->fetch_assoc())
     {
         $avlbl_amnt = $row['available_quantity'];
+        echo 1;
     }
     else
     {
-        echo 0; // There was an internal error. Try again.
+        echo 0; // Tickats are sold out!
+        //echo 0; // There was an internal error. Try again.
     }   
     //Calculate the new avlbl amnt fot the tcickets **************************************************************************
     $new_amnt = $avlbl_amnt - $t_amnt;
 
     // 1) Check user availability => SQL query (LOGGED IN USER VS TEMP USER) *************************************************
-    if($_SESSION['id'])
+    if(isset($_SESSION['id']))
     {
         $sql_ins="insert into purchases (event_name, user_id, customer, email, bottle_service, ticket_amnt, date_of_purchase)
         values('$eventName', '$user_id', '$c_name', '$email', '$b_serv', '$t_amnt', '$purchase_date')";
+        if($conn->query($sql_ins))
+        {
+            $sql_del="UPDATE tickets_avlbl set available_quantity='$new_amnt' where event_name='$eventName'";
+            if($conn->query($sql_del))
+            {
+                echo 1; //Successful purchase!
+            }
+            else
+            {
+                echo 0; //ticket_avlvbl table not accessable!
+            }
+        }
+        else
+        {
+            echo 0; //ticket_avlvbl table not accessable!
+        }
+        $conn->close();
     }
     else
     {
         $sql_ins="insert into purchases (event_name, customer, email, bottle_service, ticket_amnt, date_of_purchase)
         values('$eventName', '$c_name', '$email', '$b_serv', '$t_amnt', '$purchase_date')";
+
+        if($conn->query($sql_ins))
+        {
+            $sql_del="UPDATE tickets_avlbl set available_quantity='$new_amnt' where event_name='$eventName'";
+            if($conn->query($sql_del))
+            {
+                echo 1; //Successful purchase!
+            }
+            else
+            {
+                echo 0; //ticket_avlvbl table not accessable!
+            }
+        }
+        else
+        {
+            echo 0; //ticket_avlvbl table not accessable!
+        }
+        $conn->close();
     }
     // 2) Send SQL query => response => JS file: ticket_purchase.js
-    if($conn->query($sql_ins) === TRUE) 
-    {
-        
-    }
-    else
-    {
-        echo 0; // There was an internal error. Try again.
-        //$conn->error;
-    }
-
-    $sql_del="UPDATE tickets_avlbl set available_quantity='$new_amnt' where event_name='$eventName'";
-    if($conn->query($sql_del))
-    {
-        echo 0; // There was an internal error. Try again.
-    }
-    echo 1;
+  
 }
 else 
 {

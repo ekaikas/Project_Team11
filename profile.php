@@ -10,6 +10,7 @@ if(isset($_SESSION["username"]) === false)
     header("location: index.php");
 }
 // for Debugging purpose:
+    /*
 echo $name;
 echo $username;
 echo $email;
@@ -17,6 +18,7 @@ echo $phone;
 echo $password_vis;
 echo $password_hash;
 echo $created_on; //NOTE: server time (UTC) may be displayed
+*/
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +33,7 @@ echo $created_on; //NOTE: server time (UTC) may be displayed
 
 <body class="page-bckgrnd-edit">
     <div class="loginbox">
-        <img src="img/avatar2.png" alt="avatar image" class="avatar">
+        <img src="Img/avatar2.png" alt="avatar image" class="avatar">
         <h1>Edit Profile</h1>
             <form name= "editprofile" method="post" action="" id="form" class="form">
             <div class="message" id="message"></div>

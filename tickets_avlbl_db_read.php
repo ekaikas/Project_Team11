@@ -1,6 +1,6 @@
 <?php
 require_once 'db.php';
-
+session_start();
 $a=array();
 
 $sql = "select event_name, price_in_usd from tickets_avlbl";

@@ -1,10 +1,13 @@
+<?php
+    include "header.php";
+    include 'tickets_avlbl_db_read.php'; // Will fetch event data from DB
+?>
+
 <?php 
     $title = "Tickets | Forum Nightclub";
     $meta_desc = "Forum Nightclub Tickets";
     $meta_keywords = "events, tickets, concert, dj, party, pre-purchase, online tickets, show pass, press pass";
-    include "header.php";
-    include 'tickets_avlbl_db_read.php'; // Will fetch event data from DB
-    //include 'user_read.php'; // Will fetch user data from DB (email and name)     
+       
 ?> 
 
 <h1>Tickets</h1> 

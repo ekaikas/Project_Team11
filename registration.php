@@ -21,7 +21,7 @@ if(isset($_SESSION["username"]) === true)
 <body class="page-bckgrnd-reg">
 <div class="container">   
     <div class="loginbox scroll">
-        <img src="img/avatar2.png" alt="avatar image" class="avatar">
+        <img src="Img/avatar2.png" alt="avatar image" class="avatar">
         <h1>Create Account</h1>
         
         <form name= "registration" method="post" action="" id="form" class="form">

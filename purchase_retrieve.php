@@ -57,6 +57,8 @@
             }
             $conn->close();
             ?>
+        </tr>
+    </table>
 </div>
 
 <?php

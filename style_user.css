@@ -23,7 +23,7 @@ body{
 }
 .page-bckgrnd-edit /* active below at popup sect. */
 {
-    background: url(img/Registration_bckgrnd.jpg);
+    background: url(Img/Registration_bckgrnd.jpg);
     alt: 'background image';
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,7 +32,7 @@ body{
 }
 .page-bckgrnd-reg
 {
-    background: url(img/user_profile_bckgrnd.jpg);
+    background: url(Img/user_profile_bckgrnd.jpg);
     alt: 'background image';
     background-size: cover;
     background-repeat: no-repeat;
@@ -148,9 +148,9 @@ h1
 {
     filter: blur(5px);
 }
-.page-bckgrnd-reg.active /* */
+.page-bckgrnd-reg.active /* shadow effect for pop up*/
 {
-    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(img/user_profile_bckgrnd.jpg);
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(Img/user_profile_bckgrnd.jpg);
     alt: 'background image';
     background-size: cover;
     background-repeat: no-repeat;
@@ -159,7 +159,7 @@ h1
 }
 .page-bckgrnd-edit.active
 {
-    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(img/Registration_bckgrnd.jpg);
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(Img/Registration_bckgrnd.jpg);
     alt: 'background image';
     background-size: cover;
     background-repeat: no-repeat;

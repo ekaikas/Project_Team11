@@ -6,7 +6,8 @@ body{
 }
 .page-bckgrnd /* pop up window will change this, see it below */
 {
-    background: url(img/glad_u_came_up.jpg);
+    background: url(Img/glad_u_came_up.jpg);
+    alt:'background image';
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -114,7 +115,7 @@ h1
 }
 .page-bckgrnd.active
 {
-    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(img/glad_u_came_up.jpg);
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(Img/glad_u_came_up.jpg);
     alt: 'background image';
     background-size: cover;
     background-repeat: no-repeat;

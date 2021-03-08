@@ -167,9 +167,12 @@ function insertToDB() {
             type: 'post',
             data: { eventname: p_eventValue, name: c_nameValue, email: emailValue, amount: t_amntValue, service: b_serviceValue },
             success: function (response) { // response (echo) comes from: ticket_purchase.php
-                if (response == 1) {
+                if (response == 11) { //sum of the echos in php file
                     alert("Thank you for your purchase. You will receive an email shortly.");
                     //window.location.href = 'index.php';
+                }
+                else if (response = 0) {
+                    alert("Tickets are sold out! Check back later")
                 }
                 else {
                     alert("There was an internal error. Try again later.")
@@ -183,5 +186,6 @@ function insertToDB() {
 }
 
 //for debugging purpose:
+//alert(response)
 //alert('event: ' + p_eventValue + ', holder: ' + c_nameValue + ', card: ' + c_numberValue + ', CVV: ' + s_numberValue + ', email: ' + emailValue + ', amount: ' + t_amntValue + ', service: ' + b_serviceValue)
 //alert('event: ' + validEvent + ', holder: ' + validHolder + ', card: ' + validCard + ', CVV: ' + validSec + ', email: ' + validEmail + ', amount: ' + validAmnt + ', service: ' + validService)
