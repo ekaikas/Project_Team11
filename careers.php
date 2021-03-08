@@ -5,9 +5,6 @@
     include "header.php";
 ?>    
 
-<link rel="stylesheet" href="style_pages.css">
-
-
 <h1>Careers</h1>
 <div class="container frm">  
     <div class="row">

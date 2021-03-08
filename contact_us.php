@@ -1,17 +1,9 @@
-  
-<?php 
+ <?php 
     $title = "Contact Us | Forum Nightclub";
     $meta_desc = "Contact Us at Forum Nightclub";
     $meta_keywords = "contact, address, phone number, map, hours, hours of operation, opening hours, open, closed, close time, forum hours";
     include "header.php";
 ?>    
-
-<link rel="stylesheet" href="style_pages.css">
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
 <h1>Contact Us</h1>
 <div class="container frm">
@@ -107,10 +99,7 @@
 </div>  
 
 <!--Link to javascript form validation-->
-
 <script src="contact_us_validation.js"></script>
-
-
 
 <?php include "footer.php";
 ?>

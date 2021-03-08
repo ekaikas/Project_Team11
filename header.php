@@ -17,6 +17,8 @@
         <?php echo "$title";?>
     </title>
     <link href=style_pages.css type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="shortcut icon" type="image/x-icon" href="Img/favicon.ico" />
 </head>
 <body>

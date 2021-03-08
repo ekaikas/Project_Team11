@@ -7,7 +7,6 @@
     //include 'user_read.php'; // Will fetch user data from DB (email and name)     
 ?> 
 
-<meta charset="UTF-8">
 <h1>Tickets</h1> 
     <div class="container frm">  
         <div class="row">
