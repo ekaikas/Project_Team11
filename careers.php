@@ -136,7 +136,7 @@
 </div>
 
 <!--Link to javascript form validation-->
-<script src="Careers_Form validation and Event handling.js"></script>
+<script src="careers_validation.js"></script>
 
 <?php include "footer.php";
 ?>

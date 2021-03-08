@@ -108,7 +108,7 @@
 
 <!--Link to javascript form validation-->
 
-<script src="Contact us_Form validation and Event handling.js"></script>
+<script src="contact_us_validation.js"></script>
 
 
 
