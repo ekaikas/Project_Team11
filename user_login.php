@@ -1,6 +1,7 @@
 <?php
 require_once 'db.php';
 require_once 'user_session.php';
+include 'user_read'; // Will fetch all user data inti $_SESSION[] so it will be available for input boxes for auto fill
 
 $uname = trim($_POST['username']);
 $password_vis = trim($_POST['password']);

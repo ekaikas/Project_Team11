@@ -78,7 +78,12 @@
                                     <?php
                                         if(isset($_SESSION["username"]))
                                         {
-                                            echo'<a class="log" href="profile.php">My Profile</a>';
+                                            if($_SESSION["username"] == 'admin')
+                                            echo'<a class="log" href="admin_page.php">Admin</a>';
+                                            else if($_SESSION["username"] != 'admin')
+                                            {
+                                                echo'<a class="log" href="profile.php">My Profile</a>';
+                                            }
                                         }
                                         else
                                         {

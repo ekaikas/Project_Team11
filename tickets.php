@@ -4,8 +4,7 @@
     $meta_keywords = "events, tickets, concert, dj, party, pre-purchase, online tickets, show pass, press pass";
     include "header.php";
     include 'tickets_avlbl_db_read.php'; // Will fetch event data from DB
-    include 'user_read.php'; // Will fetch user data from DB (email and name)
-    
+    //include 'user_read.php'; // Will fetch user data from DB (email and name)     
 ?> 
 
 <meta charset="UTF-8">

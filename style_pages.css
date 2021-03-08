@@ -576,7 +576,7 @@ form {
 
 
 /*******************************************************************/
-/*****************************  ID TABLE  **************************/
+/*****************************  ADMIN TABLE  **************************/
 /*******************************************************************/
 
 .id-table {
@@ -600,5 +600,39 @@ form {
 .id-table td {
   border: 2px black solid;
   padding: 6px 3px;
+}
+
+.panel
+{
+  text-align: center;
+  margin-top: 20px;
+}
+.button2 {
+  background-color: #331a66;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: black;
+  border-radius: 4px;
+}
+.button2:hover {
+  background-color: #ac8116;
+  color: white;
+  transition: 0.2s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.logo_vector
+{
+  text-align: center;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  padding-top: 80px;
+  padding-left: 0;
+  padding-right: 0;
 }
 

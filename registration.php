@@ -79,7 +79,7 @@ if(isset($_SESSION["username"]) === true)
         <!--Creates the popup content-->
         <div class="popup-content html-pop">
             <!--<img class='error-pic' src="img/avatar2.png" alt="sad face">-->
-            <h2 class='error-message'>Error!</h2>
+            <h2 class='error-message'>Message!</h2>
             <div id = "pop_message"></div>
             <p> </p>
             <!--popup's close button-->

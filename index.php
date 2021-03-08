@@ -42,27 +42,54 @@
             session_start();
             if(isset($_SESSION["username"]) === true)
             {
-                echo'
-                <ul class="social">
-                    <li>
-                        <a href="https://facebook.com" target="_blank">
-                            <img class="sm" src="Img/facebook.png" alt="facebook logo" title="Facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com" target="_blank">
-                            <img class="sm" src="Img/instagram.png" alt="instagram logo" title="Instagram">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com" target="_blank">
-                            <img class="sm" src="Img/twitter.png" alt="twitter logo" title="Twitter">
-                        </a>
-                    </li>
-                    <li>
-                        <a class="log" href="profile.php">Hi, '.$_SESSION["username"].'</a><a class="log" href="user_logout.php">logout</a>
-                    </li>
-                </ul>';
+                if($_SESSION["username"] == 'admin')
+                {
+                    echo'
+                    <ul class="social">
+                        <li>
+                            <a href="https://facebook.com" target="_blank">
+                                <img class="sm" src="Img/facebook.png" alt="facebook logo" title="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank">
+                                <img class="sm" src="Img/instagram.png" alt="instagram logo" title="Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com" target="_blank">
+                                <img class="sm" src="Img/twitter.png" alt="twitter logo" title="Twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="log" href="admin_page.php">Hi, '.$_SESSION["username"].'</a><a class="log" href="user_logout.php">logout</a>
+                        </li>
+                    </ul>'; // Admin has access to admin_page.php
+                }
+                else
+                {
+                    echo'
+                    <ul class="social">
+                        <li>
+                            <a href="https://facebook.com" target="_blank">
+                                <img class="sm" src="Img/facebook.png" alt="facebook logo" title="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank">
+                                <img class="sm" src="Img/instagram.png" alt="instagram logo" title="Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com" target="_blank">
+                                <img class="sm" src="Img/twitter.png" alt="twitter logo" title="Twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="log" href="profile.php">Hi, '.$_SESSION["username"].'</a><a class="log" href="user_logout.php">logout</a>
+                        </li>
+                    </ul>'; //User has access to profile.php
+                }
             }
             else
             {
