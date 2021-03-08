@@ -161,16 +161,14 @@ function isBankCard(card) {
 
 // jQuery ********************************************************************************************************************************************************************
 function insertToDB() {
-    alert('eventV: ' + p_eventValue);
     if (validEvent && validHolder && validCard && validSec && validEmail && validAmnt && validService) {
         $.ajax({
             url: 'ticket_purchase.php',
             type: 'post',
             data: { eventname: p_eventValue, name: c_nameValue, email: emailValue, amount: t_amntValue, service: b_serviceValue },
-            success: function (response) {
+            success: function (response) { // response (echo) comes from: ticket_purchase.php
                 if (response == 1) {
-                    alert('eventV: ' + p_eventValue);
-                    //alert("Thank you for your purchase. You will receive an email shortly.");
+                    alert("Thank you for your purchase. You will receive an email shortly.");
                     //window.location.href = 'index.php';
                 }
                 else {
